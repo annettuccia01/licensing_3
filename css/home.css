@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Jost';
+    src: url('/fonts/Jost-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Jost';
+    src: url('/fonts/Jost-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Jost';
+    src: url('/fonts/Jost-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Jost';
+    src: url('/fonts/Jost-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+:root {
+  --color-dark: #000000;
+  --color-light:#FFFFFF;
+  --color-dark-gray: #454545;
+  --color-orange: #F6623E;
+  --color-pink:#FFF8F6;
+  
+  --font-family: 'Jost', sans-serif;
+
+  --button-height: 3.5rem;
+
+  --container-width:1920px;
+  --container-padding-x: 15px;
+
+  --transition-duration: 0.2s;
+}
+
+body {
+  font-family: var(--font-family);
+  color:var(--color-dark-gray);
+  font-size: 1.25rem;
+  background-color: var(--color-light);
+}
+
+a,button {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: var(--color-dark);
+}
+
+a:hover {
+  color: var(--color-orange);
+}
+
+.section {
+  max-width: calc(var(--container-width) + var(--container-padding-x)*2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+h1,h2,h3,h4,h5.h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.header {
+  position: absolute;
+  width: 1775px;
+  height: 47px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  top: 26px;
+  left: 73px;
+  background-color: transparent;
+}
+
+.header_logo{
+  width: 198px;
+  height: 47px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.header_list {
+  display: flex;
+  column-gap: 80px;
+}
+
+.header_link {
+  display: inline-flex;
+  align-items: center;
+  height: 38px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.header_actions {
+  display: flex;
+  column-gap: 26px;
+}
+
+.header_change {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
