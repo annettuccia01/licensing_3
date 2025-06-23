@@ -1,25 +1,48 @@
 class I18n {
-  constructor() {
-    this.translations = {};
-    this.currentLang = localStorage.getItem('preferredLanguage') || 
-                      navigator.language.split('-')[0] || 
-                      'en';
-    this.langChangeCallbacks = [];
+  constructor(supportedLanguages = ['en', 'ru']) {
+  this.translations = {};
+  this.supportedLanguages = supportedLanguages;
+  this.defaultLang = 'en';
+    
+  // Безопасное определение языка
+  this.currentLang = this.determineInitialLanguage();
+    
+  this.langChangeCallbacks = [];
+  }
+
+  determineInitialLanguage() {
+    // 1. Пробуем получить сохраненный язык
+    const storedLang = localStorage.getItem('preferredLanguage');
+    if (storedLang && this.supportedLanguages.includes(storedLang)) {
+      return storedLang;
+    }
+    
+    // 2. Пробуем определить язык браузера
+    const browserLang = navigator.language.split('-')[0];
+    if (this.supportedLanguages.includes(browserLang)) {
+      return browserLang;
+    }
+    
+    // 3. Возвращаем язык по умолчанию
+    return this.defaultLang;
   }
 
   async loadTranslations(page) {
     try {
-      // Загружаем общие переводы
+      // Загружаем обязательные общие переводы
       const commonResponse = await fetch('/locales/common.json');
+      if (!commonResponse.ok) throw new Error('Common translations failed to load');
       this.translations.common = await commonResponse.json();
       
-      // Загружаем специфичные для страницы переводы
+      // Загружаем переводы для страницы (если указана)
       if (page) {
         try {
           const pageResponse = await fetch(`/locales/${page}.json`);
-          this.translations.page = await pageResponse.json();
+          if (pageResponse.ok) {
+            this.translations.page = await pageResponse.json();
+          }
         } catch (e) {
-          console.warn(`Page-specific translations not found for ${page}`);
+          console.warn(`Page translations for ${page} not found`);
           this.translations.page = {};
         }
       }
@@ -27,7 +50,7 @@ class I18n {
       this.applyTranslationsToDOM();
       return true;
     } catch (error) {
-      console.error('Error loading translations:', error);
+      console.error('Translation loading failed:', error);
       this.translations = { common: {}, page: {} };
       return false;
     }
@@ -35,13 +58,16 @@ class I18n {
 
   t(key, options = {}) {
     const keys = key.split('.');
+    
+    // Поиск перевода в текущей локали
     let value = this._nestedGet(this.translations.page?.[this.currentLang], keys) ||
                 this._nestedGet(this.translations.common?.[this.currentLang], keys);
     
+    // Fallback на английский, если перевод не найден
     if (!value) {
       value = this._nestedGet(this.translations.page?.en, keys) ||
               this._nestedGet(this.translations.common?.en, keys) ||
-              key;
+              key; // Последний fallback - возвращаем ключ
     }
     
     return this._replaceVariables(value, options);
@@ -59,12 +85,18 @@ class I18n {
   }
 
   switchLanguage(lang) {
+    if (!this.supportedLanguages.includes(lang)) {
+      console.warn(`Language ${lang} is not supported`);
+      return false;
+    }
+    
     if (this.currentLang !== lang) {
       this.currentLang = lang;
       localStorage.setItem('preferredLanguage', lang);
       this.applyTranslationsToDOM();
       this.notifyLanguageChange();
     }
+    return true;
   }
 
   onLanguageChange(callback) {
