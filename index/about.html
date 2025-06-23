@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/about.css">
     <script src="/js/theme.js" defer></script>
+    <script src="/js/i18n.js" type="module"></script>
 </head>
 <body>
     <header class="header">
@@ -24,11 +25,11 @@
         </div>
         <nav class="header_menu">
             <ul class="header_list">
-                <li><a class="header_link header_link--home" href="home.html">home</a></li>
-                <li><a class="header_link header_link--shop" href="#shop">shop</a></li>
-                <li><a class="header_link header_link--reviews" href="home.html#reviews">reviews</a></li>
-                <li><a class="header_link header_link--contact" href="contact.html">contact</a></li>
-                <li><a class="header_link header_link--about" href="#about">about us</a></li>
+                <li><a class="header_link header_link--home" href="home.html" data-i18n="header.home">home</a></li>
+                <li><a class="header_link header_link--shop" href="#shop" data-i18n="header.shop">shop</a></li>
+                <li><a class="header_link header_link--reviews" href="home.html#reviews" data-i18n="header.reviews">reviews</a></li>
+                <li><a class="header_link header_link--contact" href="contact.html" data-i18n="header.contact">contact</a></li>
+                <li><a class="header_link header_link--about" href="about.html" data-i18n="header.about">about us</a></li>
             </ul>
         </nav>
         <div class="header_actions">
@@ -65,11 +66,11 @@
     <main>
         <section id="about" class="about">
             <div class="about_text">
-                <div class="about_text--supertitle">game-changing vitamins</div>
-                <div class="about_text--title">about good4me</div>
-                <div class="about_text--subtitle about-subtitle1">At Good4Me, we believe in the importance of taking control of our own overall health and wellness, physically, mentally and everything in between. </div>
-                <div class="about_text--subtitle about-subtitle2">Take this as a sign it’s time to get on top of your health, once and for all. Good4Me vitamins are here and ready to boost your mood, immunity and overall well-being! We’ve formulated and designed each soft chew gummy to specifically target different areas in need. The Good4Me vitamin range will compliment whatever lifestyle you live.</div>
-                <div class="about_text--subtitle about-subtitle3">Our chewable gummies are small but mighty, boasting a list of naturally active ingredients and to top it off, are all vegan friendly. Simple, effective and super convenient for on the go, you won’t find anything as good as Good4Me.</div>
+                <div class="about_text--supertitle" data-i18n="about.supertitle">game-changing vitamins</div>
+                <div class="about_text--title" data-i18n="about.title">about good4me</div>
+                <div class="about_text--subtitle about-subtitle1" data-i18n="about.subtitle1">At Good4Me, we believe in the importance of taking control of our own overall health and wellness, physically, mentally and everything in between. </div>
+                <div class="about_text--subtitle about-subtitle2" data-i18n="about.subtitle2">Take this as a sign it’s time to get on top of your health, once and for all. Good4Me vitamins are here and ready to boost your mood, immunity and overall well-being! We’ve formulated and designed each soft chew gummy to specifically target different areas in need. The Good4Me vitamin range will compliment whatever lifestyle you live.</div>
+                <div class="about_text--subtitle about-subtitle3" data-i18n="about.subtitle3">Our chewable gummies are small but mighty, boasting a list of naturally active ingredients and to top it off, are all vegan friendly. Simple, effective and super convenient for on the go, you won’t find anything as good as Good4Me.</div>
             </div>
             <div class="about_overlap">
                 <div class="about_overlap--rectangle"></div>
@@ -92,25 +93,25 @@
                         <path d="M1268.87 139.418C1258.34 147.812 1263.13 163.667 1276.2 163.667C1284.33 163.667 1289 159.004 1289 151.01C1289 145.68 1288.33 144.215 1284.6 140.884C1279.67 136.354 1273.27 135.821 1268.87 139.418Z" fill="black"/>
                     </svg>
                 </div>
-                <p class="footer_right--text">Good health is important, so all of our products have been carefully designed to bring out the best in you.</p>
+                <p class="footer_right--text" data-i18n="footer.text">Good health is important, so all of our products have been carefully designed to bring out the best in you.</p>
             </div>
             <div class="footer_center">
-                <h3 class="footer_center--title">keep in touch</h3>
-                <p class="footer_center--text">Subscribe to our socials to receive new product updates, be the first to know about sales, and much more.</p>
+                <h3 class="footer_center--title" data-i18n="footer.keep_in_touch">keep in touch</h3>
+                <p class="footer_center--text" data-i18n="footer.subscribe_text">Subscribe to our socials to receive new product updates, be the first to know about sales, and much more.</p>
             </div>
             <div class="footer_left">
-                <h3 class="footer_left--title">more info</h3>
+                <h3 class="footer_left--title" data-i18n="footer.more_info">more info</h3>
                 <ul class="footer_left--links">
-                    <li><a class="footer_link footer_links--shipping" href="shipping.html">Shipping & Delivery</a></li>
-                    <li><a class="footer_link footer_links--return" href="refund.html">Refund Policy</a></li>
-                    <li><a class="footer_link footer_links--privacy" href="privacy.html">Privacy Policy</a></li>
-                    <li><a class="footer_link footer_links--terms" href="terms.html">Terms & Conditions</a></li>
+                    <li><a class="footer_link footer_links--shipping" href="shipping.html" data-i18n="footer.shipping_link">Shipping & Delivery</a></li>
+                    <li><a class="footer_link footer_links--return" href="refund.html" data-i18n="footer.refund_link">Refund Policy</a></li>
+                    <li><a class="footer_link footer_links--privacy" href="privacy.html" data-i18n="footer.privacy_link">Privacy Policy</a></li>
+                    <li><a class="footer_link footer_links--terms" href="terms.html" data-i18n="footer.terms_link">Terms & Conditions</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer_line"></div>
         <div class="footer_copyright">
-            <p>© 2025, GOOD4ME. Powered by Shopify</p>
+            <p data-i18n="footer.copyright">© 2025, GOOD4ME. Powered by Shopify</p>
         </div>
     </footer>
 </body>

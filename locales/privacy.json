@@ -1,0 +1,56 @@
+{
+  "en": {
+    "privacy": {
+        "title": "privacy policy",
+        "description": "This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from www.good4meproducts.com (the \"Site\").",
+        "info_title": "personal information we collect",
+        "info_text1": "When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the Site, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the Site, and information about how you interact with the Site. We refer to this automatically-collected information as \"Device Information\".",
+        "info_text2": "Additionally when you make a purchase or attempt to make a purchase through the Site, we collect certain information from you, including your name, billing address, shipping address, payment information (including credit card numbers, email address, and phone number. We refer to this information as \"Order Information\".",
+        "info_text3": "When we talk about \"Personal Information\" in this Privacy Policy, we are talking both about Device Information and Order Information.",
+        "use_title": "how do we use your personal information?",
+        "use_text1": "We use the Order Information that we collect generally to fulfill any orders placed through the Site (including processing your payment information, arranging for shipping, and providing you with invoices and/or order confirmations).",
+        "use_text2": "We use the Device Information that we collect to help us screen for potential risk and fraud (in particular, your IP address), and more generally to improve and optimize our Site (for example, by generating analytics about how our customers browse and interact with the Site, and to assess the success of our marketing and advertising campaigns).",
+        "share_title": "sharing your personal information",
+        "share_text1": "We share your Personal Information with third parties to help us use your Personal Information, as described above. For example, we use Shopify to power our online store--you can read more about how Shopify uses your Personal Information here: https://www.shopify.com/legal/privacy. We also use Google Analytics to help us understand how our customers use the Site -- you can read more about how Google uses your Personal Information here: https://www.google.com/intl/en/policies/privacy/. You can also opt-out of Google Analytics here: https://tools.google.com/dlpage/gaoptout.",
+        "share_text2": "Finally, we may also share your Personal Information to comply with applicable laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive, or to otherwise protect our rights.",
+        "advertising_title": "behavioral advertising",
+        "advertising_text1": "As described above, we use your Personal Information to provide you with targeted advertisements or marketing communications we believe may be of interest to you. For more information about how targeted advertising works, you can visit the Network Advertising Initiative's (\"NAI\") educational page at http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work.",
+        "advertising_text2": "Additionally, you can opt out of some of these services by visiting the Digital Advertising Alliance's opt-out portal at: http://optout.aboutads.info/.",
+        "track_title": "do not track",
+        "track_text": "Please note that we do not alter our Site's data collection and use practices when we see a Do Not Track signal from your browser.",
+        "retention_title": "data retention",
+        "retention_text": "When you place an order through the Site, we will maintain your Order Information for our records unless and until you ask us to delete this information.",
+        "changes_title": "changes",
+        "changes_text": "We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons.",
+        "contact_title": "contact us",
+        "contact_text": "For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e‑mail at contact@good4meproducts.com"
+    }
+  },
+  "ru": {
+    "privacy": {
+        "title": "конфиденциальность",
+        "description": "Настоящая Политика конфиденциальности описывает, как собирается, используется и передается ваша персональная информация при посещении или совершении покупок на сайте www.good4meproducts.com (далее - \"Сайт\").",
+        "info_title": "собираемая персональная информация",
+        "info_text1": "Когда вы посещаете Сайт, мы автоматически собираем определенную информацию о вашем устройстве, включая данные о вашем веб-браузере, IP-адресе, часовом поясе и некоторых файлах cookie, установленных на вашем устройстве. Кроме того, при просмотре Сайта мы собираем информацию об отдельных веб-страницах или товарах, которые вы просматриваете, какие сайты или поисковые запросы привели вас на Сайт, а также информацию о том, как вы взаимодействуете с Сайтом. Мы называем эту автоматически собираемую информацию \"Информацией об устройстве\".",
+        "info_text2": "Кроме того, когда вы совершаете покупку или пытаетесь совершить покупку через Сайт, мы собираем определенную информацию от вас, включая ваше имя, платежный адрес, адрес доставки, платежную информацию (включая номера кредитных карт), адрес электронной почты и номер телефона. Мы называем эту информацию \"Информацией о заказе\".",
+        "info_text3": "Когда в настоящей Политике конфиденциальности мы говорим о \"Персональной информации\", мы имеем в виду как Информацию об устройстве, так и Информацию о заказе.",
+        "use_title": "как мы используем эту информацию?",
+        "use_text1": "Мы используем Информацию о заказе, которую собираем, как правило, для выполнения заказов, размещенных через Сайт (включая обработку вашей платежной информации, организацию доставки и предоставление вам счетов-фактур и/или подтверждений заказов).",
+        "use_text2": "Мы используем Информацию об устройстве, которую мы собираем, чтобы помочь нам выявлять потенциальные риски и мошенничество (в частности, ваш IP-адрес), а также в целом для улучшения и оптимизации нашего Сайта (например, путем создания аналитики о том, как наши клиенты просматривают и взаимодействуют с Сайтом, и для оценки успешности наших маркетинговых и рекламных кампаний).",
+        "share_title": "передача информации о вас",
+        "share_text1": "Мы передаем вашу Персональную информацию третьим лицам, чтобы помочь нам использовать вашу Персональную информацию, как описано выше. Например, мы используем Shopify для работы нашего интернет-магазина - вы можете прочитать больше о том, как Shopify использует вашу Персональную информацию, здесь: https://www.shopify.com/legal/privacy. Мы также используем Google Analytics, чтобы помочь нам понять, как наши клиенты используют Сайт - вы можете прочитать больше о том, как Google использует вашу Персональную информацию, здесь: https://www.google.com/intl/en/policies/privacy/. Вы также можете отказаться от использования Google Analytics здесь: https://tools.google.com/dlpage/gaoptout.",
+        "share_text2": "Наконец, мы можем также передавать вашу Персональную информацию для соблюдения применимых законов и нормативных актов, для ответа на повестку в суд, ордер на обыск или другой законный запрос на информацию, который мы получаем, или для иной защиты наших прав.",
+        "advertising_title": "поведенческая реклама",
+        "advertising_text1": "Как описано выше, мы используем вашу Персональную информацию, чтобы предоставлять вам целевые рекламные объявления или маркетинговые сообщения, которые, как мы считаем, могут вас заинтересовать. Для получения дополнительной информации о том, как работает целевая реклама, вы можете посетить образовательную страницу Сети рекламных инициатив (\"NAI\") по адресу: http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work.",
+        "advertising_text2": "Кроме того, вы можете отказаться от некоторых из этих услуг, посетив портал отказа Digital Advertising Alliance по адресу: http://optout.aboutads.info/.",
+        "track_title": "не отслеживаем",
+        "track_text": "Обратите внимание, что мы не изменяем практику сбора и использования данных нашего Сайта, когда видим сигнал \"Не отслеживать\" от вашего браузера.",
+        "retention_title": "хранение данных",
+        "retention_text": "Когда вы размещаете заказ через Сайт, мы будем хранить Информацию о вашем заказе в наших записях, если и пока вы не попросите нас удалить эту информацию.",
+        "changes_title": "изменения",
+        "changes_text": "Мы можем время от времени обновлять настоящую Политику конфиденциальности, чтобы отражать, например, изменения в нашей практике или по другим операционным, юридическим или нормативным причинам.",
+        "contact_title": "свяжитесь с нами",
+        "contact_text": "Для получения дополнительной информации о нашей практике конфиденциальности, если у вас есть вопросы или если вы хотите подать жалобу, пожалуйста, свяжитесь с нами по электронной почте contact@good4meproducts.com"
+    }
+  }
+}

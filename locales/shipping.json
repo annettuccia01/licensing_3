@@ -1,0 +1,28 @@
+{
+  "en": {
+    "shipping": {
+        "title": "shipping & delivery",
+        "worldwide": "We ship all over the world.",
+        "processing_time": "Processing can take 1 to 2 business days (usually same day), and then one of our delivery partners will get the item to you. You'll get a shipment notification email with a tracking number once your parcel leaves us.",
+        "tracking_title": "i haven't got a tracking number",
+        "tracking_text": "If you didn't receive a tracking email, please check your junk mail first. If you received your tracking email but your tracking number isn't updating or working at all after 1-2 days it has been dispatched, feel free to email us at contact@good4meproducts.com and we will look into it for you.",
+        "taxes_title": "taxes & duties",
+        "taxes_text": "You are responsible for any fees on arrival to your country, if any. Please check with your local customs of any importation fees first.",
+        "timeframes_title": "shipping timeframes",
+        "timeframes_text": "All shipping timeframes are estimates provided by our shipping partners. We will process and send your order as quickly as possible, once it has left us it is in the hands of the delivery companies, and whilst we can help you track the shipment, we have limited control over the delivery of your order. You can email contact@good4meproducts.com if you wish to make an enquiry."
+    }
+  },
+  "ru": {
+    "shipping": {
+        "title": "доставка",
+        "worldwide": "Мы осуществляем доставку по всему миру.",
+        "processing_time": "Обработка заказа занимает 1-2 рабочих дня (обычно в тот же день), затем наши партнеры по доставке доставят ваш заказ. Вы получите email с номером для отслеживания, как только посылка покинет наш склад.",
+        "tracking_title": "у меня нет номера для отслеживания",
+        "tracking_text": "Если вы не получили письмо с номером отслеживания, сначала проверьте папку «Спам». Если вы получили письмо, но номер не работает или не обновляется в течение 1-2 дней после отправки, напишите нам на contact@good4meproducts.com, и мы разберёмся.",
+        "taxes_title": "налоги и пошлины",
+        "taxes_text": "Вы несете ответственность за любые таможенные пошлины при получении заказа. Пожалуйста, уточните в местной таможне информацию о возможных сборах.",
+        "timeframes_title": "сроки доставки",
+        "timeframes_text": "Все сроки доставки являются ориентировочными и предоставлены нашими партнерами. Мы обработаем и отправим ваш заказ как можно быстрее, но после отправки он находится в руках служб доставки, и мы не можем напрямую влиять на сроки. Вы можете написать на contact@good4meproducts.com для уточнения информации."
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "en": {
+    "refund": {
+        "title": "refund policy",
+        "nature_text": "Due to the nature of our products, we do not allow change of mind returns or exchanges once the seal on the item has been opened.",
+        "faulty_text": "If your product is faulty, please email us some information and a photo of what has happened to contact@good4meproducts.com and we will help to resolve the issue by providing a replacement or refund."
+    }
+  },
+  "ru": {
+    "refund": {
+        "title": "Политика возврата",
+        "nature_text": "Из-за характера нашей продукции мы не принимаем возвраты или обмены по причине изменения решения, если упаковка товара была вскрыта.",
+        "faulty_text": "Если ваш товар оказался бракованным, пожалуйста, напишите нам на contact@good4meproducts.com и приложите информацию и фотографию проблемы, и мы поможем решить вопрос, предоставив замену или возврат средств."
+    }
+  }
+}

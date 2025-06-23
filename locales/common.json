@@ -1,0 +1,42 @@
+{
+  "en": {
+    "header": {
+      "home": "home",
+      "shop": "shop",
+      "reviews": "reviews",
+      "contact": "contact",
+      "about": "about us"
+    },
+    "footer": {
+      "text": "Good health is important, so all of our products have been carefully designed to bring out the best in you.",
+      "keep_in_touch": "keep in touch",
+      "subscribe_text": "Subscribe to our socials to receive new product updates, be the first to know about sales, and much more.",
+      "more_info": "more info",
+      "shipping_link": "Shipping & Delivery",
+      "refund_link": "Refund Policy",
+      "privacy_link": "Privacy Policy",
+      "terms_link": "Terms & Conditions",
+      "copyright": "© 2025, GOOD4ME. Powered by Shopify"
+    }
+  },
+  "ru": {
+    "header": {
+      "home": "главная",
+      "shop": "магазин",
+      "reviews": "отзывы",
+      "contact": "контакты",
+      "about": "о нас"
+    },
+    "footer": {
+      "text": "Хорошее здоровье важно, поэтому все наши продукты были тщательно разработаны, чтобы раскрыть в вас лучшее.",
+      "keep_in_touch": "будьте на связи",
+      "subscribe_text": "Подпишитесь на наши соцсети, чтобы получать информацию о новых продуктах, первыми узнавать о распродажах и многое другое.",
+      "more_info": "дополнительно",
+      "shipping_link": "Доставка",
+      "refund_link": "Возврат",
+      "privacy_link": "Конфиденциальность",
+      "terms_link": "Пользование",
+      "copyright": "© 2025, GOOD4ME. Работает на Shopify"
+    }
+  }
+}

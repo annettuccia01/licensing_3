@@ -1,0 +1,52 @@
+{
+  "en": {
+    "home": {
+        "home_title":"MULTI-VITAMIN (3 MONTH SUPPLY)",
+        "home_subtitle":"Good4Me Apple Cider Vinegar gummies are the newest addition to your morning health and well-being regime.",
+        "home_btn":"shop now",
+        "servises_worldwide":"worldwide shipping",
+        "servises_guarantee": "30 days guarantee",
+        "servises_payments":"secured payments",
+        "control_title": "take control of your health",
+        "control_subtitle1": "The Good4Me range has been formulated based on scientific. Our vitamins are here and ready to boost your mood, immunity and overall well-being!",
+        "control_subtitle2": "Our vitamins are here and ready to boost your mood. New Zealand from local and imported ingredients.",
+        "control_btn": "browse our range",
+        "inside_title": "what's in good4me?",
+        "inside_subtitle": "Your health deserves the best. We offer scientifically backed, pure vitamins to help you feel your best every day",
+        "inside_health": "supports overall health and wellbeing",
+        "inside_skin": "supports healthy skin",
+        "inside_detox": "supports whole body cleanse & detoxification",
+        "inside_weight": "supports weight management",
+        "reviews_supertitle": "clients loved products",
+        "reviews_title": "real results",
+        "review_text1": "“We have perfected our formulas over time, based on your feedback. Check out hundreds of reviews on our website.We can't wait until you are a part of our Good4Me Family.”",
+        "review_client1": "_Chloe H.",
+        "running_text": "Small steps in nutrition can lead to big changes in how you feel every day"
+    }
+  },
+  "ru": {
+    "home": {
+        "home_title":"МУЛЬТИВИТАМИНЫ (НА 3 МЕСЯЦА)",
+        "home_subtitle":"Жевательные конфеты Good4Me с яблочным уксусом — дополнение к вашему утреннему рациону для здоровья.",
+        "home_btn":"купить сейчас",
+        "servises_worldwide":"международная доставка",
+        "servises_guarantee":"гарантия 30 дней",
+        "servises_payments":"безопасные платежи",
+        "control_title": "контроль над здоровьем",
+        "control_subtitle1": "Ассортимент Good4Me был разработан на основе научных данных. Наши витамины здесь и готовы улучшить ваше настроение, иммунитет и общее самочувствие!",
+        "control_subtitle2": "Наши витамины готовы поднять вам настроение. Изготовлено в Новой Зеландии из местных и импортных ингредиентов.",
+        "control_btn": "посмотри ассортимент",
+        "inside_title": "что в good4me?",
+        "inside_subtitle": "Ваше здоровье заслуживает лучшего. Мы предлагаем чистые витамины, которые помогут вам чувствовать себя лучше каждый день",
+        "inside_health": "поддерживает общее состояние здоровья",
+        "inside_skin": "поддерживает здоровую кожу",
+        "inside_detox": "способствует очищению организма",
+        "inside_weight": "поддерживает контроль веса",
+        "reviews_supertitle": "клиентам понравилась продукция",
+        "reviews_title": "реальные результаты",
+        "review_text1": "“Мы совершенствовали наши формулы с течением времени, основываясь на ваших отзывах. Ознакомьтесь с сотнями отзывов на нашем сайте. Мы с нетерпением ждем, когда вы станете частью нашей семьи Good4Me.”",
+        "review_client1": "_Хлоя Х.",
+        "running_text": "Небольшие шаги в питании приведут к большим изменениям в самочувствии каждый день"
+    }
+  }
+}

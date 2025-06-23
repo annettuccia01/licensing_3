@@ -1,0 +1,16 @@
+{
+  "en": {
+    "contact":{
+        "title": "contact us",
+        "address": "Warehouse Address: 6 Walter Macdonald Street Howick, Auckland, 2014, New Zealand.",
+        "email": "Got a question? You can email us directly at contact@good4meproducts.com"
+    }
+  },
+  "ru": {
+    "contact":{
+        "title": "контакты",
+        "address": "Адрес склада: 6 Walter Macdonald Street Howick, Auckland, 2014, Новая Зеландия.",
+        "email": "Есть вопрос? Вы можете написать нам напрямую на contact@good4meproducts.com"
+    }
+  }
+}

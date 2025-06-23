@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/home.css">
     <script src="/js/theme.js" defer></script>
     <script src="/js/infiniteCarousel.js" defer></script>
+    <script src="/js/i18n.js" type="module"></script>
 </head>
 <body>
     <header class="header">
@@ -25,11 +26,11 @@
         </div>
         <nav class="header_menu">
             <ul class="header_list">
-                <li><a class="header_link header_link--home" href="#home">home</a></li>
-                <li><a class="header_link header_link--shop" href="#shop">shop</a></li>
-                <li><a class="header_link header_link--reviews" href="#reviews">reviews</a></li>
-                <li><a class="header_link header_link--contact" href="contact.html">contact</a></li>
-                <li><a class="header_link header_link--about" href="about.html">about us</a></li>
+                <li><a class="header_link header_link--home" href="home.html" data-i18n="header.home">home</a></li>
+                <li><a class="header_link header_link--shop" href="#shop" data-i18n="header.shop">shop</a></li>
+                <li><a class="header_link header_link--reviews" href="home.html#reviews" data-i18n="header.reviews">reviews</a></li>
+                <li><a class="header_link header_link--contact" href="contact.html" data-i18n="header.contact">contact</a></li>
+                <li><a class="header_link header_link--about" href="about.html" data-i18n="header.about">about us</a></li>
             </ul>
         </nav>
         <div class="header_actions">
@@ -67,9 +68,9 @@
         <section id="home" class="home">
             <div class="home_text">
                 <div class="home_text--supertitle">Good4Me</div>
-                <h1 class="home_text--title">MULTI-VITAMIN (3 MONTH SUPPLY)</h1>
-                <p class="home_text--subtitle">Good4Me Apple Cider Vinegar gummies are the newest addition to your morning health and well-being regime. </p>
-                <div class="home_btn"><a class="shop-btn" href="">shop now</a></div>
+                <h1 class="home_text--title" data-i18n="home.home_title">MULTI-VITAMIN (3 MONTH SUPPLY)</h1>
+                <p class="home_text--subtitle" data-i18n="home.home_subtitle">Good4Me Apple Cider Vinegar gummies are the newest addition to your morning health and well-being regime.</p>
+                <div class="home_btn"><a class="shop-btn" href="" data-i18n="home.home_btn">shop now</a></div>
             </div>
             <picture><img class="home_img" src="/assets/home/slider/img1.svg" alt="vitamins in jars"></picture>
         </section>
@@ -87,7 +88,7 @@
                     </svg>
                 </div>
                 <div class="servises_shipping--ellipse"></div>
-                <h5 class="servises_shipping--text">worldwide shipping</h5>
+                <h5 class="servises_shipping--text" data-i18n="home.servises_worldwide">worldwide shipping</h5>
             </div>
             <div class="servises_guarantee">
                 <div class="servises_guarantee--img">
@@ -99,7 +100,7 @@
                     </svg>
                 </div>
                 <div class="servises_guarantee--ellipse"></div>
-                <h5 class="servises_guarantee--text">30 days guarantee</h5>
+                <h5 class="servises_guarantee--text" data-i18n="home.servises_guarantee">30 days guarantee</h5>
             </div>
             <div class="servises_payments">
                 <div class="servises_payments--img">
@@ -109,7 +110,7 @@
                     </svg>
                 </div>
                 <div class="servises_payments--ellipse"></div>
-                <h5 class="servises_payments--text">secured payments</h5>
+                <h5 class="servises_payments--text" data-i18n="home.servises_payments">secured payments</h5>
             </div>
         </section>
         <section class="control">
@@ -165,42 +166,42 @@
                     </svg>
                 </div>
                     <div class="control_text">
-                    <h2 class="control_text--title">take control of your health</h2>
-                    <div class="control_text--subtitle control_subtitle1">The Good4Me range has been formulated based on scientific. Our vitamins are here and ready to boost your mood, immunity and overall well-being!</div>
-                    <div class="control_text--subtitle control_subtitle2">Our vitamins are here and ready to boost your mood. New Zealand from local and imported ingredients.</div>
-                    <div class="control_btn"> <a class="shop-btn" href="">browse our range</a></div>
+                    <h2 class="control_text--title" data-i18n="home.control_title">take control of your health</h2>
+                    <div class="control_text--subtitle control_subtitle1" data-i18n="home.control_subtitle1">The Good4Me range has been formulated based on scientific. Our vitamins are here and ready to boost your mood, immunity and overall well-being!</div>
+                    <div class="control_text--subtitle control_subtitle2" data-i18n="home.control_subtitle1">Our vitamins are here and ready to boost your mood. New Zealand from local and imported ingredients.</div>
+                    <div class="control_btn"><a class="shop-btn" href="" data-i18n="home.control_btn">browse our range</a></div>
                 </div>
                 <picture><img class="control_img" src="/assets/home/control/img1.svg" alt="selfie"></picture>
             </div>
         </section>
         <section class="inside">
             <div class="inside_text">
-                <h3 class="inside_text--title">what's in good4me?</h3>
-                <div class="inside_text--subtitle">Your health deserves the best. We offer scientifically backed, pure vitamins to help you feel your best every day</div>
+                <h3 class="inside_text--title" data-i18n="home.inside_title">what's in good4me?</h3>
+                <div class="inside_text--subtitle" data-i18n="home.inside_subtitle">Your health deserves the best. We offer scientifically backed, pure vitamins to help you feel your best every day</div>
             </div>
             <div class="inside_overlap">
                 <div class="inside_ellipse--one"></div>
                 <div class="inside_ellipse--two"></div>
                 <div class="inside_ellipse--three"></div>
                 <picture><img class="inside_img" src="/assets/home/inside/img1.svg" alt="vitamin-pic"></picture>
-                <div class="inside_health">supports overall health and wellbeing</div>
-                <div class="inside_skin">supports healthy skin</div>
-                <div class="inside_detox">supports whole body cleanse & detoxification</div>
-                <div class="inside_weight">supports weight management</div>
+                <div class="inside_health" data-i18n="home.inside_health">supports overall health and wellbeing</div>
+                <div class="inside_skin" data-i18n="home.inside_skin">supports healthy skin</div>
+                <div class="inside_detox" data-i18n="home.inside_detox">supports whole body cleanse & detoxification</div>
+                <div class="inside_weight" data-i18n="home.inside_weight">supports weight management</div>
             </div>
             
             
         </section>
         <section id="reviews" class="reviews">
             <div class="reviews_text">
-                <div class="reviews_text--supertitle">clients loved products</div>
-                <div class="reviews_text--title">real results</div>
+                <div class="reviews_text--supertitle" data-i18n="home.reviews_supertitle">clients loved products</div>
+                <div class="reviews_text--title" data-i18n="home.reviews_title">real results</div>
             </div>
             <div class="reviews_slider">
                 <div class="slide active" id="slidesContainer">
                     <div class="slide_text">
-                        <div class="slide_text--review">“We have perfected our formulas over time, based on your feedback. Check out hundreds of reviews on our website.We can't wait until you are a part of our Good4Me Family.”</div>
-                        <div class="slide_text--client">_Chloe H.</div>
+                        <div class="slide_text--review" data-i18n="home.review_text1">“We have perfected our formulas over time, based on your feedback. Check out hundreds of reviews on our website.We can't wait until you are a part of our Good4Me Family.”</div>
+                        <div class="slide_text--client" data-i18n="home.review_client1">_Chloe H.</div>
                     </div>
                     <picture><img class="slide_pic" src="/assets/home/reviews/img1.svg" alt="review pic"></picture>
                 </div>
@@ -213,7 +214,7 @@
         <section class="running">
             <div class="running_text">
                     <div class="running_text--title">#good4me</div>
-                    <div class="running_text--subtitle">Small steps in nutrition can lead to big changes in how you feel every day</div>
+                    <div class="running_text--subtitle" data-i18n="home.running_text">Small steps in nutrition can lead to big changes in how you feel every day</div>
             </div>
             <div class="running_carousel">
                 <div class="running_track">
@@ -243,25 +244,25 @@
                         <path d="M1268.87 139.418C1258.34 147.812 1263.13 163.667 1276.2 163.667C1284.33 163.667 1289 159.004 1289 151.01C1289 145.68 1288.33 144.215 1284.6 140.884C1279.67 136.354 1273.27 135.821 1268.87 139.418Z" fill="black"/>
                     </svg>
                 </div>
-                <p class="footer_right--text">Good health is important, so all of our products have been carefully designed to bring out the best in you.</p>
+                <p class="footer_right--text" data-i18n="footer.text">Good health is important, so all of our products have been carefully designed to bring out the best in you.</p>
             </div>
             <div class="footer_center">
-                <h3 class="footer_center--title">keep in touch</h3>
-                <p class="footer_center--text">Subscribe to our socials to receive new product updates, be the first to know about sales, and much more.</p>
+                <h3 class="footer_center--title" data-i18n="footer.keep_in_touch">keep in touch</h3>
+                <p class="footer_center--text" data-i18n="footer.subscribe_text">Subscribe to our socials to receive new product updates, be the first to know about sales, and much more.</p>
             </div>
             <div class="footer_left">
-                <h3 class="footer_left--title">more info</h3>
+                <h3 class="footer_left--title" data-i18n="footer.more_info">more info</h3>
                 <ul class="footer_left--links">
-                    <li><a class="footer_link footer_links--shipping" href="shipping.html">Shipping & Delivery</a></li>
-                    <li><a class="footer_link footer_links--return" href="refund.html">Refund Policy</a></li>
-                    <li><a class="footer_link footer_links--privacy" href="privacy.html">Privacy Policy</a></li>
-                    <li><a class="footer_link footer_links--terms" href="terms.html">Terms & Conditions</a></li>
+                    <li><a class="footer_link footer_links--shipping" href="shipping.html" data-i18n="footer.shipping_link">Shipping & Delivery</a></li>
+                    <li><a class="footer_link footer_links--return" href="refund.html" data-i18n="footer.refund_link">Refund Policy</a></li>
+                    <li><a class="footer_link footer_links--privacy" href="privacy.html" data-i18n="footer.privacy_link">Privacy Policy</a></li>
+                    <li><a class="footer_link footer_links--terms" href="terms.html" data-i18n="footer.terms_link">Terms & Conditions</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer_line"></div>
         <div class="footer_copyright">
-            <p>© 2025, GOOD4ME. Powered by Shopify</p>
+            <p data-i18n="footer.copyright">© 2025, GOOD4ME. Powered by Shopify</p>
         </div>
     </footer>
 </body>
