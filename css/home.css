@@ -481,13 +481,21 @@ h5{
   position: relative;
   top: 7rem;
   left: 7.06rem;
+  overflow: hidden;
+  width: 100%;
 }
 
 .slide{
   display: none;
   position: relative;
-  display: flex;
   flex-direction: row;
+  width: 100%;
+  transition: opacity 0.5s ease;
+}
+
+.slide.active {
+  display: flex;
+  animation: fadeIn 0.5s ease;
 }
 
 .slide_text{
