@@ -1,0 +1,56 @@
+body {
+  width: var(--container-width);
+  font-family: var(--font-family);
+  color:var(--color-dark-gray);
+  font-size: 1.25rem;
+  background-color: var(--color-light);
+}
+
+main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--container-width);
+    width: 100%;
+    height: auto;
+    background-color: var(--color-pink);
+    margin-top: 6.25rem;
+}
+
+.privacy, .refund, .shipping, .terms_conditions{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+    width: 100%;
+    height: auto;
+}
+
+h1{
+    color: var(--color-dark);
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 5.125rem;
+    text-transform: uppercase;
+}
+
+h2{
+    color: var(--color-dark);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    text-transform: uppercase;
+}
+
+p{
+    color: var(--color-dark-gray);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.125rem;
+    letter-spacing: 0.0625rem;
+}
