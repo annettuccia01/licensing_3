@@ -1,4 +1,5 @@
-[
+{
+    "products": [
     {
         "id" : 1,
         "category": "Hair, skin and nails",
@@ -330,3 +331,4 @@
         "img": "/assets/shop/img30.svg"
     }
 ]
+}

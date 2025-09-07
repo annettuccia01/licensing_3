@@ -1,12 +1,9 @@
-// Функция полной очистки localStorage
 function resetStorage(showConfirm = true) {
   try {
-    // Проверка подтверждения
     if (showConfirm && !confirm('Вы уверены, что хотите сбросить все настройки?')) {
       return false;
     }
 
-    // Полная очистка
     localStorage.clear();
     console.log('LocalStorage полностью очищен');
 
@@ -17,7 +14,6 @@ function resetStorage(showConfirm = true) {
   }
 }
 
-// Инициализация кнопки сброса
 function initResetButton(buttonId = 'reset') {
   const button = document.getElementById(buttonId);
   if (!button) {
@@ -28,14 +24,13 @@ function initResetButton(buttonId = 'reset') {
   button.addEventListener('click', () => {
     const success = resetStorage();
     if (success) {
-      location.reload(); // Перезагрузка для применения сброса
+      location.reload();
     } else {
       alert('Ошибка при сбросе. Проверьте консоль.');
     }
   });
 }
 
-// Автоматическая инициализация при загрузке
 document.addEventListener('DOMContentLoaded', () => {
   initResetButton('reset');
 });
