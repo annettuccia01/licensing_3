@@ -18,5 +18,4 @@ function animatePreloader() {
     }, 30);
 }
 
-// Запускаем анимацию после полной загрузки страницы
 window.addEventListener("load", animatePreloader);

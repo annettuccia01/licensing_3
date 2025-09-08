@@ -6,8 +6,7 @@
     <title>Good4Me</title>
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/catalog.css">
-    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/pages/about/about.css">
 </head>
 <body>
     <div class="preloader">
@@ -34,11 +33,11 @@
         </div>
         <nav class="header_menu">
             <ul class="header_list">
-                <li><a class="header_link header_link--home" href="home.html" data-i18n="header.home">home</a></li>
-                <li><a class="header_link header_link--shop" href="catalog.html" data-i18n="header.shop">shop</a></li>
+                <li><a class="header_link header_link--home" href="/pages/home/home.html" data-i18n="header.home">home</a></li>
+                <li><a class="header_link header_link--shop" href="/pages/catalog/catalog.html" data-i18n="header.shop">shop</a></li>
                 <li><a class="header_link header_link--reviews" href="home.html#reviews" data-i18n="header.reviews">reviews</a></li>
-                <li><a class="header_link header_link--contact" href="contact.html" data-i18n="header.contact">contact</a></li>
-                <li><a class="header_link header_link--about" href="about.html" data-i18n="header.about">about us</a></li>
+                <li><a class="header_link header_link--contact" href="/pages/contact/contact.html" data-i18n="header.contact">contact</a></li>
+                <li><a class="header_link header_link--about" href="#" data-i18n="header.about">about us</a></li>
             </ul>
         </nav>
         <div class="header_actions">
@@ -65,75 +64,28 @@
                     <path d="M20.7611 15.5147C19.4538 14.2077 17.8979 13.2402 16.2003 12.6545C18.0185 11.4024 19.213 9.30694 19.213 6.9375C19.213 3.11217 16.1003 0 12.2744 0C8.44844 0 5.33577 3.11217 5.33577 6.9375C5.33577 9.30694 6.53029 11.4024 8.34854 12.6545C6.65092 13.2402 5.09498 14.2077 3.78776 15.5147C1.5209 17.7812 0.272461 20.7947 0.272461 24H2.14776C2.14776 18.417 6.69054 13.875 12.2744 13.875C17.8582 13.875 22.401 18.417 22.401 24H24.2763C24.2763 20.7947 23.0279 17.7812 20.7611 15.5147ZM12.2744 12C9.48248 12 7.21107 9.729 7.21107 6.9375C7.21107 4.146 9.48248 1.875 12.2744 1.875C15.0663 1.875 17.3377 4.146 17.3377 6.9375C17.3377 9.729 15.0663 12 12.2744 12Z" fill="#454545"/>
                 </svg>
             </button>
-            <button id="reset" class="header_change header_change--undo">
+            <button class="header_change header_change--undo">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
                     <path d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"/>
                 </svg>
             </button>
-            <div class="cart-icon" id="cart-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg>
-                <span class="cart-count" id="cart-count">0</span>
-            </div>
         </div>
     </header>
-    <div class="container">
-        <div class="top-controls">
-            <div class="search-box">
-                <input type="text" id="search" placeholder="Search supplements...">
+    <main>
+        <section id="about" class="about">
+            <div class="about_text">
+                <div class="about_text--supertitle" data-i18n="about.supertitle">game-changing vitamins</div>
+                <div class="about_text--title" data-i18n="about.title">about good4me</div>
+                <div class="about_text--subtitle about-subtitle1" data-i18n="about.subtitle1">At Good4Me, we believe in the importance of taking control of our own overall health and wellness, physically, mentally and everything in between. </div>
+                <div class="about_text--subtitle about-subtitle2" data-i18n="about.subtitle2">Take this as a sign it’s time to get on top of your health, once and for all. Good4Me vitamins are here and ready to boost your mood, immunity and overall well-being! We’ve formulated and designed each soft chew gummy to specifically target different areas in need. The Good4Me vitamin range will compliment whatever lifestyle you live.</div>
+                <div class="about_text--subtitle about-subtitle3" data-i18n="about.subtitle3">Our chewable gummies are small but mighty, boasting a list of naturally active ingredients and to top it off, are all vegan friendly. Simple, effective and super convenient for on the go, you won’t find anything as good as Good4Me.</div>
             </div>
-            <div class="sort-box">
-                <select id="sort">
-                    <option value="default">Sort by</option>
-                    <option value="price-asc">Price: Low to High</option>
-                    <option value="price-desc">Price: High to Low</option>
-                    <option value="rating-desc">Rating: High to Low</option>
-                    <option value="rating-asc">Rating: Low to High</option>
-                    <option value="name-asc">Name: A-Z</option>
-                    <option value="name-desc">Name: Z-A</option>
-                </select>
+            <div class="about_overlap">
+                <div class="about_overlap--rectangle"></div>
+                <picture><img class="about_overlap--img" src="/assets/home/about/img1.svg" alt=""></picture>
             </div>
-        </div>
-        <div class="main-content">
-            <div class="filters-column">
-                <div class="price-filter">
-                    <h3>Price Range</h3>
-                    <div class="price-inputs">
-                        <input type="number" id="min-price" placeholder="Min" min="0">
-                        <input type="number" id="max-price" placeholder="Max" min="0">
-                    </div>
-                </div>
-                <div class="category-filter">
-                    <h3>Categories</h3>
-                    <div class="category-options" id="category-options"></div>
-                    <div class="filter-buttons">
-                        <button class="apply-filters" id="apply-filters">Apply</button>
-                        <button class="reset-filters" id="reset-filters">Reset</button>
-                    </div>
-                </div>
-            </div>
-            <div class="catalog-column">
-                <div class="products" id="products-container"></div>
-                <div class="pagination" id="pagination"></div>
-            </div>
-        </div>
-    </div>
-    <div class="overlay" id="overlay"></div>
-    <div class="cart-sidebar" id="cart-sidebar">
-        <div class="cart-header">
-            <div class="cart-title">In Your Cart</div>
-            <div class="cart-close" id="cart-close">&times;</div>
-        </div>
-        <div class="cart-items" id="cart-items">
-        </div>
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total:</span>
-                <span id="cart-total-price">$0.00</span>
-            </div>
-            <button class="cart-checkout" id="cart-checkout">Checkout</button>
-        </div>
-    </div>
-
+        </section>
+    </main>
     <footer class="footer">
         <div class="footer_container">
             <div class="footer_right">
@@ -158,10 +110,10 @@
             <div class="footer_left">
                 <h3 class="footer_left--title" data-i18n="footer.more_info">more info</h3>
                 <ul class="footer_left--links">
-                    <li><a class="footer_link footer_links--shipping" href="shipping.html" data-i18n="footer.shipping_link">Shipping & Delivery</a></li>
-                    <li><a class="footer_link footer_links--return" href="refund.html" data-i18n="footer.refund_link">Refund Policy</a></li>
-                    <li><a class="footer_link footer_links--privacy" href="privacy.html" data-i18n="footer.privacy_link">Privacy Policy</a></li>
-                    <li><a class="footer_link footer_links--terms" href="terms.html" data-i18n="footer.terms_link">Terms & Conditions</a></li>
+                    <li><a class="footer_link footer_links--shipping" href="/pages/policies/shipping.html" data-i18n="footer.shipping_link">Shipping & Delivery</a></li>
+                    <li><a class="footer_link footer_links--return" href="/pages/policies/refund.html" data-i18n="footer.refund_link">Refund Policy</a></li>
+                    <li><a class="footer_link footer_links--privacy" href="/pages/policies/privacy.html" data-i18n="footer.privacy_link">Privacy Policy</a></li>
+                    <li><a class="footer_link footer_links--terms" href="/pages/policies/terms.html" data-i18n="footer.terms_link">Terms & Conditions</a></li>
                 </ul>
             </div>
         </div>
@@ -173,12 +125,7 @@
 
     <script src="/js/preloader.js"></script>
     <script src="/js/theme.js" defer></script>
-
-    <script src="/js/products.js" defer></script>
-    <script src="/js/filters.js" defer></script>
-    <script src="/js/pagination.js" defer></script>
-    <script src="/js/cart.js" defer></script>
-    <script src="/js/cart-main.js" defer></script>
-    <script src="/js/reset.js" defer></script>
+    <script src="/js/i18n.js" type="module"></script>
+    <script src="/js/reset.js" type="module"></script>
 </body>
 </html>

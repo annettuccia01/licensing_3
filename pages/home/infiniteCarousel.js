@@ -2,7 +2,6 @@ function initInfiniteCarousel() {
     const track = document.querySelector('.running_track');  
     const images = document.querySelectorAll('.running_track img');  
     
-    // Клонирование изображений для бесшовного зацикливания  
     images.forEach(img => {  
         const clone = img.cloneNode(true);  
         track.appendChild(clone);  
@@ -17,7 +16,6 @@ function initInfiniteCarousel() {
         if (!isPaused) {  
             position -= speed;  
             
-            // Сброс позиции, когда прокрутился набор изображений 
             if (position <= -track.scrollWidth / 2) {  
                 position = 0;  
             }  
@@ -28,7 +26,6 @@ function initInfiniteCarousel() {
         animationFrameId = requestAnimationFrame(animateCarousel);  
     }  
     
-    // Начало анимации 
     animateCarousel();   
 }  
 

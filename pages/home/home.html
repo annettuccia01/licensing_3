@@ -6,7 +6,7 @@
     <title>Good4Me</title>
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/pages/home/home.css">
 </head>
 <body>
     <div class="preloader">
@@ -33,11 +33,11 @@
         </div>
         <nav class="header_menu">
             <ul class="header_list">
-                <li><a class="header_link header_link--home" href="home.html" data-i18n="header.home">home</a></li>
-                <li><a class="header_link header_link--shop" href="catalog.html" data-i18n="header.shop">shop</a></li>
+                <li><a class="header_link header_link--home" href="#" data-i18n="header.home">home</a></li>
+                <li><a class="header_link header_link--shop" href="/pages/catalog/catalog.html" data-i18n="header.shop">shop</a></li>
                 <li><a class="header_link header_link--reviews" href="home.html#reviews" data-i18n="header.reviews">reviews</a></li>
-                <li><a class="header_link header_link--contact" href="contact.html" data-i18n="header.contact">contact</a></li>
-                <li><a class="header_link header_link--about" href="about.html" data-i18n="header.about">about us</a></li>
+                <li><a class="header_link header_link--contact" href="/pages/contact/contact.html" data-i18n="header.contact">contact</a></li>
+                <li><a class="header_link header_link--about" href="/pages/about/about.html" data-i18n="header.about">about us</a></li>
             </ul>
         </nav>
         <div class="header_actions">
@@ -77,7 +77,7 @@
                 <div class="home_text--supertitle">Good4Me</div>
                 <h1 class="home_text--title" data-i18n="home.home_title">MULTI-VITAMIN (3 MONTH SUPPLY)</h1>
                 <p class="home_text--subtitle" data-i18n="home.home_subtitle">Good4Me Apple Cider Vinegar gummies are the newest addition to your morning health and well-being regime.</p>
-                <div class="home_btn"><a class="shop-btn" href="/index/catalog.html" data-i18n="home.home_btn">shop now</a></div>
+                <div class="home_btn"><a class="shop-btn" href="/pages/catalog/catalog.html" data-i18n="home.home_btn">shop now</a></div>
             </div>
             <picture><img class="home_img" src="/assets/home/slider/img1.svg" alt="vitamins in jars"></picture>
         </section>
@@ -176,7 +176,7 @@
                     <h2 class="control_text--title" data-i18n="home.control_title">take control of your health</h2>
                     <div class="control_text--subtitle control_subtitle1" data-i18n="home.control_subtitle1">The Good4Me range has been formulated based on scientific. Our vitamins are here and ready to boost your mood, immunity and overall well-being!</div>
                     <div class="control_text--subtitle control_subtitle2" data-i18n="home.control_subtitle1">Our vitamins are here and ready to boost your mood. New Zealand from local and imported ingredients.</div>
-                    <div class="control_btn"><a class="shop-btn" href="" data-i18n="home.control_btn">browse our range</a></div>
+                    <div class="control_btn"><a class="shop-btn" href="/pages/catalog/catalog.html" data-i18n="home.control_btn">browse our range</a></div>
                 </div>
                 <picture><img class="control_img" src="/assets/home/control/img1.svg" alt="selfie"></picture>
             </div>
@@ -295,10 +295,10 @@
             <div class="footer_left">
                 <h3 class="footer_left--title" data-i18n="footer.more_info">more info</h3>
                 <ul class="footer_left--links">
-                    <li><a class="footer_link footer_links--shipping" href="shipping.html" data-i18n="footer.shipping_link">Shipping & Delivery</a></li>
-                    <li><a class="footer_link footer_links--return" href="refund.html" data-i18n="footer.refund_link">Refund Policy</a></li>
-                    <li><a class="footer_link footer_links--privacy" href="privacy.html" data-i18n="footer.privacy_link">Privacy Policy</a></li>
-                    <li><a class="footer_link footer_links--terms" href="terms.html" data-i18n="footer.terms_link">Terms & Conditions</a></li>
+                    <li><a class="footer_link footer_links--shipping" href="/pages/policies/shipping.html" data-i18n="footer.shipping_link">Shipping & Delivery</a></li>
+                    <li><a class="footer_link footer_links--return" href="/pages/policies/refund.html" data-i18n="footer.refund_link">Refund Policy</a></li>
+                    <li><a class="footer_link footer_links--privacy" href="/pages/policies/privacy.html" data-i18n="footer.privacy_link">Privacy Policy</a></li>
+                    <li><a class="footer_link footer_links--terms" href="/pages/policies/terms.html" data-i18n="footer.terms_link">Terms & Conditions</a></li>
                 </ul>
             </div>
         </div>
@@ -310,9 +310,9 @@
 
     <script src="/js/preloader.js"></script>
     <script src="/js/theme.js" defer></script>
-    <script src="/js/infiniteCarousel.js" defer></script>
     <script src="/js/i18n.js" type="module"></script>
     <script src="/js/reset.js"  type="module"></script>
-    <script src="/js/slider.js"></script>
+    <script src="/pages/home/infiniteCarousel.js" defer></script>
+    <script src="/pages/home/slider.js"></script>
 </body>
 </html>

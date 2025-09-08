@@ -6,7 +6,7 @@
     <title>Good4Me</title>
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/policy-pages.css">
+    <link rel="stylesheet" href="/pages/contact/contact.css">
 </head>
 <body>
     <div class="preloader">
@@ -33,11 +33,11 @@
         </div>
         <nav class="header_menu">
             <ul class="header_list">
-                <li><a class="header_link header_link--home" href="home.html" data-i18n="header.home">home</a></li>
-                <li><a class="header_link header_link--shop" href="catalog.html" data-i18n="header.shop">shop</a></li>
+                <li><a class="header_link header_link--home" href="/pages/home/home.html" data-i18n="header.home">home</a></li>
+                <li><a class="header_link header_link--shop" href="/pages/catalog/catalog.html" data-i18n="header.shop">shop</a></li>
                 <li><a class="header_link header_link--reviews" href="home.html#reviews" data-i18n="header.reviews">reviews</a></li>
-                <li><a class="header_link header_link--contact" href="contact.html" data-i18n="header.contact">contact</a></li>
-                <li><a class="header_link header_link--about" href="about.html" data-i18n="header.about">about us</a></li>
+                <li><a class="header_link header_link--contact" href="#" data-i18n="header.contact">contact</a></li>
+                <li><a class="header_link header_link--about" href="/pages/about/about.html" data-i18n="header.about">about us</a></li>
             </ul>
         </nav>
         <div class="header_actions">
@@ -72,10 +72,18 @@
         </div>
     </header>
     <main>
-        <section class="refund">
-            <h1 data-i18n="refund.title">refund policy</h1>
-            <p data-i18n="refund.nature_text">Due to the nature of our products, we do not allow change of mind returns or exchanges once the seal on the item has been opened.</p>
-            <p data-i18n="refund.faulty_text">If your product is faulty, please email us some information and a photo of what has happened to contact@good4meproducts.com and we will help to resolve the issue by providing a replacement or refund.</p>
+        <section id="contact" class="contact">
+            <div class="contact_overlap">
+                <div class="contact_overlap--rectangle"></div>
+                <div class="contact_overlap--map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1533.1365637371548!2d174.9305460538934!3d-36.8923008787207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d4b2888e0886b%3A0x3bf95b9e79e3510e!2zNiBXYWx0ZXIgTWFjRG9uYWxkIFN0cmVldCwgSG93aWNrLCBBdWNrbGFuZCAyMDE0LCDQndC-0LLQsNGPINCX0LXQu9Cw0L3QtNC40Y8!5e1!3m2!1sru!2sby!4v1749994084190!5m2!1sru!2sby" width="546" height="764" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="contact_info">
+                <div class="contact_info--title" data-i18n="contact.title">contact us</div>
+                <div class="contact_info--address" data-i18n="contact.address">Warehouse Address: 6 Walter Macdonald Street Howick, Auckland, 2014, New Zealand.</div>
+                <div class="contact_info--email" data-i18n="contact.email">Got a question? You can email us directly at contact@good4meproducts.com</div>
+            </div>
         </section>
     </main>
     <footer class="footer">
@@ -102,10 +110,10 @@
             <div class="footer_left">
                 <h3 class="footer_left--title" data-i18n="footer.more_info">more info</h3>
                 <ul class="footer_left--links">
-                    <li><a class="footer_link footer_links--shipping" href="shipping.html" data-i18n="footer.shipping_link">Shipping & Delivery</a></li>
-                    <li><a class="footer_link footer_links--return" href="refund.html" data-i18n="footer.refund_link">Refund Policy</a></li>
-                    <li><a class="footer_link footer_links--privacy" href="privacy.html" data-i18n="footer.privacy_link">Privacy Policy</a></li>
-                    <li><a class="footer_link footer_links--terms" href="terms.html" data-i18n="footer.terms_link">Terms & Conditions</a></li>
+                   <li><a class="footer_link footer_links--shipping" href="/pages/policies/shipping.html" data-i18n="footer.shipping_link">Shipping & Delivery</a></li>
+                    <li><a class="footer_link footer_links--return" href="/pages/policies/refund.html" data-i18n="footer.refund_link">Refund Policy</a></li>
+                    <li><a class="footer_link footer_links--privacy" href="/pages/policies/privacy.html" data-i18n="footer.privacy_link">Privacy Policy</a></li>
+                    <li><a class="footer_link footer_links--terms" href="/pages/policies/terms.html" data-i18n="footer.terms_link">Terms & Conditions</a></li>
                 </ul>
             </div>
         </div>
