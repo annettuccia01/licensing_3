@@ -17,6 +17,14 @@
       "privacy_link": "Privacy Policy",
       "terms_link": "Terms & Conditions",
       "copyright": "© 2025, GOOD4ME. Powered by Shopify"
+    },
+    "modal": {
+      "title": "Account",
+      "email_label": "Email",
+      "password_label": "Password",
+      "submit": "Sign In",
+      "register_text": "Don't have an account?",
+      "register_link": "Sign Up"
     }
   },
   "ru": {
@@ -37,6 +45,14 @@
       "privacy_link": "Конфиденциальность",
       "terms_link": "Пользование",
       "copyright": "© 2025, GOOD4ME. Работает на Shopify"
+    },
+    "modal": {
+      "title": "Аккаунт",
+      "email_label": "Электронная почта",
+      "password_label": "Пароль",
+      "submit": "Войти",
+      "register_text": "Нет аккаунта?",
+      "register_link": "Зарегистрироваться"
     }
   }
 }

@@ -4,7 +4,6 @@ class I18n {
   this.supportedLanguages = supportedLanguages;
   this.defaultLang = 'en';
     
-  // Безопасное определение языка
   this.currentLang = this.determineInitialLanguage();
     
   this.langChangeCallbacks = [];

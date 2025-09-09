@@ -6,6 +6,7 @@
     <title>Good4Me</title>
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/pages/modal/modal.css">
     <link rel="stylesheet" href="/pages/home/home.css">
 </head>
 <body>
@@ -18,6 +19,28 @@
             <div class="percent">0%</div>
         </div>
     </div>
+    <div id="account-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <button id="close-modal" class="modal-close">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M256-200l-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224z"/>
+                </svg>
+            </button>
+            <h2 class="modal-title" data-i18n="modal.title">Account</h2>
+                <form class="modal-form">
+                <label for="email" data-i18n="modal.email_label">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                <label for="password" data-i18n="modal.password_label">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+                <button type="submit" class="modal-submit" data-i18n="modal.submit">Sign In</button>
+                <p class="modal-register">
+                    <span data-i18n="modal.register_text">Don't have an account?</span>
+                    <a href="/pages/register/register.html" class="modal-register-link" data-i18n="modal.register_link">Sign Up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <main>
     <header class="header">
         <div class="header_logo-img">
             <svg width="1289" height="165" viewBox="0 0 1289 165" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +82,7 @@
                     <path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/>
                 </svg>
             </button>
-            <button class="header_change header_change--account">
+            <button id="account-btn" class="header_change header_change--account">
                 <svg class="icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20.7611 15.5147C19.4538 14.2077 17.8979 13.2402 16.2003 12.6545C18.0185 11.4024 19.213 9.30694 19.213 6.9375C19.213 3.11217 16.1003 0 12.2744 0C8.44844 0 5.33577 3.11217 5.33577 6.9375C5.33577 9.30694 6.53029 11.4024 8.34854 12.6545C6.65092 13.2402 5.09498 14.2077 3.78776 15.5147C1.5209 17.7812 0.272461 20.7947 0.272461 24H2.14776C2.14776 18.417 6.69054 13.875 12.2744 13.875C17.8582 13.875 22.401 18.417 22.401 24H24.2763C24.2763 20.7947 23.0279 17.7812 20.7611 15.5147ZM12.2744 12C9.48248 12 7.21107 9.729 7.21107 6.9375C7.21107 4.146 9.48248 1.875 12.2744 1.875C15.0663 1.875 17.3377 4.146 17.3377 6.9375C17.3377 9.729 15.0663 12 12.2744 12Z" fill="#454545"/>
                 </svg>
@@ -314,5 +337,6 @@
     <script src="/js/reset.js"  type="module"></script>
     <script src="/pages/home/infiniteCarousel.js" defer></script>
     <script src="/pages/home/slider.js"></script>
+    <script src="/pages/modal/modal.js"></script>
 </body>
 </html>
