@@ -30,9 +30,9 @@
             <h2 class="modal-title" data-i18n="modal.title">Account</h2>
                 <form class="modal-form">
                 <label for="email" data-i18n="modal.email_label">Email</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                <input type="email" id="email" name="email" required data-i18n="modal.place_holder_email">
                 <label for="password" data-i18n="modal.password_label">Password</label>
-                <input type="password" id="password" name="password" required placeholder="Enter your password">
+                <input type="password" id="password" name="password" required data-i18n="modal.place_holder_password">
                 <button type="submit" class="modal-submit" data-i18n="modal.submit">Sign In</button>
                 <p class="modal-register">
                     <span data-i18n="modal.register_text">Don't have an account?</span>
@@ -194,14 +194,15 @@
     </footer>
 
     <script src="/js/preloader.js"></script>
+    <script src="/js/i18n.js" type="module"></script>
     <script src="/js/theme.js" defer></script>
     <script src="/js/reset.js" defer></script>
 
-    <script src="/js/products.js" defer></script>
-    <script src="/js/filters.js" defer></script>
-    <script src="/js/pagination.js" defer></script>
-    <script src="/js/cart.js" defer></script>
-    <script src="/js/cart-main.js" defer></script>
+    <script src="/pages/catalog/products.js" defer></script>
+    <script src="/pages/catalog/filters.js" defer></script>
+    <script src="/pages/catalog/pagination.js" defer></script>
+    <script src="/pages/catalog/cart.js" defer></script>
+    <script src="/pages/catalog/cart-main.js" defer></script>
 
     <script src="/pages/modal/modal.js"></script>
 </body>

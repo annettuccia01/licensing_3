@@ -29,14 +29,14 @@ class I18n {
   async loadTranslations(page) {
     try {
       // Загружаем обязательные общие переводы
-      const commonResponse = await fetch('/locales/common.json');
+      const commonResponse = await fetch('/locales/common.json?format=json');
       if (!commonResponse.ok) throw new Error('Common translations failed to load');
       this.translations.common = await commonResponse.json();
       
       // Загружаем переводы для страницы (если указана)
       if (page) {
         try {
-          const pageResponse = await fetch(`/locales/${page}.json`);
+          const pageResponse = await fetch(`/locales/${page}.json?format=json`);
           if (pageResponse.ok) {
             this.translations.page = await pageResponse.json();
           }
