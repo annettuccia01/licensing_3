@@ -1,12 +1,13 @@
 body {
-  width: var(--container-width);
-  font-family: var(--font-family);
-  color:var(--color-dark-gray);
-  font-size: 1.25rem;
-  background-color: var(--color-light);
+    width: 100%;
+    max-width: var(--container-width);
+    font-family: var(--font-family);
+    color: var(--color-dark-gray);
+    font-size: 1.25rem;
+    background-color: var(--color-light);
 }
 
-main{
+main {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -19,16 +20,17 @@ main{
     margin-top: 6.25rem;
 }
 
-.privacy, .refund, .shipping, .terms_conditions{
+.privacy, .refund, .shipping, .terms_conditions {
     position: relative;
     display: flex;
     flex-direction: column;
     max-width: 50rem;
     width: 100%;
     height: auto;
+    padding: 0 var(--container-padding-x);
 }
 
-h1{
+h1 {
     color: var(--color-dark);
     text-align: center;
     font-size: 3.5rem;
@@ -37,7 +39,7 @@ h1{
     text-transform: uppercase;
 }
 
-h2{
+h2 {
     color: var(--color-dark);
     text-align: center;
     font-size: 3rem;
@@ -46,11 +48,91 @@ h2{
     text-transform: uppercase;
 }
 
-p{
+p {
     color: var(--color-dark-gray);
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 500;
     line-height: 2.125rem;
     letter-spacing: 0.0625rem;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    main {
+        margin-top: 4.5rem;
+    }
+
+    .privacy, .refund, .shipping, .terms_conditions {
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.875rem;
+    }
+
+    main {
+        margin-top: 3.5rem;
+    }
+
+    .privacy, .refund, .shipping, .terms_conditions {
+        padding: 0 8px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 2.75rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+        line-height: 1.4rem;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        font-size: 0.8125rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    p {
+        font-size: 0.8125rem;
+        line-height: 1.3rem;
+    }
 }
