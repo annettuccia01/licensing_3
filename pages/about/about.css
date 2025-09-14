@@ -1,87 +1,233 @@
 body {
-  width: var(--container-width);
-  font-family: var(--font-family);
-  color:var(--color-dark-gray);
-  font-size: 1.25rem;
-  background-color: var(--color-light);
+    width: 100%;
+    max-width: var(--container-width);
+    font-family: var(--font-family);
+    color: var(--color-dark-gray);
+    font-size: 1.25rem;
+    background-color: var(--color-light);
 }
 
-a,button {
-  transition-duration: var(--transition-duration);
+a, button {
+    transition-duration: var(--transition-duration);
 }
 
 .section {
-  max-width: calc(var(--container-width) + var(--container-padding-x)*2);
-  margin-inline: auto;
-  padding-inline: var(--container-padding-x);
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
 }
 
-.about{
-  position: relative;
-  margin-top: 6.25rem;
-  margin-left: 4.44rem;
-  display: flex;
+.about {
+    position: relative;
+    margin-top: 6.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.about_text{
-  position: relative;
-  top: 8.94rem;
-  width: 50.4375rem;
-  display: flex;
-  flex-direction: column;
+.about_text {
+    position: relative;
+    width: 100%;
+    max-width: 50.4375rem;
+    display: flex;
+    flex-direction: column;
+    top: 8.94rem;
 }
 
-.about_text--supertitle{
-  color: var(--color-orange);
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 5.125rem;
-  letter-spacing: 0.0625rem;
-  text-transform: uppercase;
+.about_text--supertitle {
+    color: var(--color-orange);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
-.about_text--title{
-  color: var(--color-dark);
-  font-size: 2.875rem;
-  font-weight: 700;
-  line-height: 3.25rem;
-  letter-spacing: 0.0625rem;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
+.about_text--title {
+    color: var(--color-dark);
+    font-size: 2.875rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
 }
 
-.about_text--subtitle{
-  color: var(--color-dark-gray);
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 2.125rem;
-  letter-spacing: 0.0625rem;
-  margin-bottom: 2rem;
+.about_text--subtitle {
+    color: var(--color-dark-gray);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2.125rem;
+    letter-spacing: 0.0625rem;
+    margin-bottom: 2rem;
+    overflow-wrap: break-word;
 }
 
-.about_overlap{
-  position: relative;
-  left:5.38rem;
-  width: 55.25rem;
-  height: 55.25rem;
+.about_overlap {
+    position: relative;
+    width: 100%;
+    max-width: 55.25rem;
+    height: auto;
+    aspect-ratio: 1 / 1;
 }
 
-.about_overlap--rectangle{
-  position: absolute;
-  top: 11rem;
-  left: 7.12rem;
-  width: 42rem;
-  height: 44.25rem;
-  border-radius: 1.25rem;
-  background: var(--color-pink);
-  z-index: 1;
+.about_overlap--rectangle {
+    position: absolute;
+    top: 11rem;
+    left: 7.12rem;
+    width: 42rem;
+    height: 44.25rem;
+    border-radius: 1.25rem;
+    background: var(--color-pink);
+    z-index: 1;
 }
 
-.about_overlap--img{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 55.25rem;
-  height: 55.25rem;
-  z-index: 2;
+.about_overlap--img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+@media (max-width: 1723px) {
+  .about_text {
+    top: 0;
+  }
+}
+
+@media (max-width: 882px) {
+    .about_overlap--rectangle {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 2rem;
+        width: calc(100% - 4rem);
+        height: calc(100% - 2rem);
+        border-radius: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .about {
+        margin-top: 4.5rem;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        padding: 0 var(--container-padding-x);
+    }
+
+    .about_text {
+        max-width: 100%;
+        top: 0;
+    }
+
+    .about_text--supertitle {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .about_text--title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about_text--subtitle {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about_overlap {
+        max-width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    .about_overlap--rectangle {
+        top: 2rem;
+    }
+
+    .about_overlap--img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.875rem;
+    }
+
+    .about {
+        margin-top: 3.5rem;
+        padding: 0 8px;
+    }
+
+    .about_text {
+        padding: 0 8px;
+    }
+
+    .about_text--supertitle {
+        font-size: 0.875rem;
+        line-height: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .about_text--title {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .about_text--subtitle {
+        font-size: 0.875rem;
+        line-height: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .about_overlap--rectangle {
+        top: 1.5rem;
+        left: 1.5rem;
+        width: calc(100% - 3rem);
+        height: calc(100% - 1.5rem);
+        border-radius: 0.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        font-size: 0.8125rem;
+    }
+
+    .about_text--supertitle {
+        font-size: 0.8125rem;
+        line-height: 1.1rem;
+    }
+
+    .about_text--title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .about_text--subtitle {
+        font-size: 0.8125rem;
+        line-height: 1.3rem;
+    }
+
+    .about_overlap--rectangle {
+        top: 1rem;
+        left: 1rem;
+        width: calc(100% - 2rem);
+        height: calc(100% - 1rem);
+    }
 }
