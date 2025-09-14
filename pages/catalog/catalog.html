@@ -28,12 +28,12 @@
                 </svg>
             </button>
             <h2 class="modal-title" data-i18n="modal.title">Account</h2>
-                <form class="modal-form">
+            <form id="loginForm" class="modal-form">
                 <label for="email" data-i18n="modal.email_label">Email</label>
-                <input type="email" id="email" name="email" required data-i18n="modal.place_holder_email">
+                <input type="email" id="email" name="email" required data-i18n="modal.place_holder_email" autocomplete="email" placeholder="Enter your email">
                 <label for="password" data-i18n="modal.password_label">Password</label>
-                <input type="password" id="password" name="password" required data-i18n="modal.place_holder_password">
-                <button type="submit" class="modal-submit" data-i18n="modal.submit">Sign In</button>
+                <input type="password" id="password" name="password" required data-i18n="modal.place_holder_password" autocomplete="current-password" placeholder="Enter your password">
+                <button id="loginBtn" type="submit" class="modal-submit" data-i18n="modal.submit">Sign In</button>
                 <p class="modal-register">
                     <span data-i18n="modal.register_text">Don't have an account?</span>
                     <a href="/pages/register/register.html" class="modal-register-link" data-i18n="modal.register_link">Sign Up</a>
@@ -58,7 +58,7 @@
             <ul class="header_list">
                 <li><a class="header_link header_link--home" href="/pages/home/home.html" data-i18n="header.home">home</a></li>
                 <li><a class="header_link header_link--shop" href="#" data-i18n="header.shop">shop</a></li>
-                <li><a class="header_link header_link--reviews" href="home.html#reviews" data-i18n="header.reviews">reviews</a></li>
+                <li><a class="header_link header_link--reviews" href="/pages/home/home.html#reviews" data-i18n="header.reviews">reviews</a></li>
                 <li><a class="header_link header_link--contact" href="/pages/contact/contact.html" data-i18n="header.contact">contact</a></li>
                 <li><a class="header_link header_link--about" href="/pages/about/about.html" data-i18n="header.about">about us</a></li>
             </ul>
