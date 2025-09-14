@@ -1,80 +1,237 @@
-body {
-  width: var(--container-width);
-  font-family: var(--font-family);
-  color:var(--color-dark-gray);
-  font-size: 1.25rem;
-  background-color: var(--color-light);
+:root {
+    --color-dark: #000000;
+    --color-light: #FFFFFF;
+    --color-dark-gray: #454545;
+    --color-orange: #F6623E;
+    --color-pink: #FFF8F6;
+    --font-family: 'Jost', sans-serif;
+    --container-width: 1920px;
+    --container-padding-x: 15px;
+    --transition-duration: 0.2s;
 }
 
-a,button {
-  transition-duration: var(--transition-duration);
+body {
+    width: 100%;
+    max-width: var(--container-width);
+    font-family: var(--font-family);
+    color: var(--color-dark-gray);
+    font-size: 1.25rem;
+    background-color: var(--color-light);
+}
+
+a, button {
+    transition-duration: var(--transition-duration);
 }
 
 .section {
-  max-width: calc(var(--container-width) + var(--container-padding-x)*2);
-  margin-inline: auto;
-  padding-inline: var(--container-padding-x);
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
 }
 
-.contact{
-  position: relative;
-  margin-top: 6.25rem;
-  width: 99.3125rem;
-  height: 59.375rem;
-  display: flex;
-  flex-direction: row;
+.contact {
+    position: relative;
+    margin-top: 6.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14.75rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 0;
 }
 
-.contact_overlap{
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 54rem;
-  height: 59.375rem;
+.contact_overlap {
+    position: relative;
+    width: 100%;
+    max-width: 54rem;
+    height: auto;
+    aspect-ratio: 864 / 950;
+    max-height: 59.375rem;
+    margin-left: calc(-1 * var(--container-padding-x));
 }
 
-.contact_overlap--rectangle{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 46.875rem;
-  height: 59.375rem;
-  border-radius: 0rem 0.625rem 0.625rem 0rem;
-  background: var(--color-pink);
-  z-index: 1;
+.contact_overlap--rectangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 46.875rem;
+    height: 100%;
+    border-radius: 0 0.625rem 0.625rem 0;
+    background: var(--color-pink);
+    z-index: 1;
 }
 
-.contact_overlap--map{
-  position: absolute;
-  top: 5.81rem;
-  left: 19.88rem;
-  max-width: 34.125rem;
-  aspect-ratio: 273/382;
-  z-index: 2;
+.contact_overlap--map {
+    position: absolute;
+    top: 5.81rem;
+    left: 19.88rem;
+    width: 100%;
+    max-width: 34.125rem;
+    aspect-ratio: 273 / 382;
+    z-index: 2;
 }
 
-.contact_info{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  top: 23.5rem;
-  left: 6rem;
-  width: 39.3125rem;
+.contact_overlap--map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
-.contact_info--title{
-  color: var(--color-dark);
-  font-size: 3.125rem;
-  font-weight: 700;
-  line-height: 4.5rem;
-  letter-spacing: 0.1875rem;
-  text-transform: uppercase;
+.contact_info {
+    position: relative;
+    width: 100%;
+    max-width: 39.3125rem;
+    display: flex;
+    flex-direction: column;
+    top: 23.5rem;
 }
 
-.contact_info--address, .contact_info--email{
-  color: var(--color-dark-gray);
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.5625rem;
-  margin-top: 2.19rem;
+.contact_info--title {
+    color: var(--color-dark);
+    font-size: 3.125rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    letter-spacing: 0.1875rem;
+    text-transform: uppercase;
+}
+
+.contact_info--address,
+.contact_info--email {
+    color: var(--color-dark-gray);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5625rem;
+    margin-top: 2.19rem;
+}
+
+@media (max-width: 1714px) {
+    .contact {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 1510px) {
+    .contact {
+        gap: 0;
+    }
+
+    .contact_info {
+        top: 13.5rem;
+    }
+
+    .contact_overlap {
+        max-width: 40rem;
+        width: 100%;
+        max-height: 44.2708rem;
+    }
+
+    .contact_overlap--rectangle {
+        width: 24rem;
+        height: 100%;
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .contact_overlap--map {
+        top: 5rem;
+        left: 5rem;
+        max-width: 25.2604rem;
+    }
+}
+
+@media (max-width: 1254px) {
+    .contact {
+        gap: 0;
+        flex-wrap: nowrap;
+    }
+
+    .contact_info {
+        max-width: 30rem;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .contact {
+        margin-top: 2rem;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 1rem;
+    }
+
+    .contact_overlap {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 273 / 382;
+        margin-left: calc(-1 * var(--container-padding-x));
+    }
+
+    .contact_overlap--rectangle {
+        display: none;
+    }
+
+    .contact_overlap--map {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        max-height: 40rem;
+        margin-top: 0.5rem;
+    }
+
+    .contact_info {
+        max-width: 100%;
+        top: 0;
+        padding: 0 0;
+        margin: 1rem auto;
+        text-align: center;
+        z-index: 3;
+    }
+
+    .contact_info--title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        letter-spacing: 0.125rem;
+    }
+
+    .contact_info--address, .contact_info--email {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.875rem;
+    }
+    
+    .contact_info--title {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact_info--address, .contact_info--email {
+        font-size: 0.875rem;
+        line-height: 1.4rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .contact_info--title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .contact_info--address, .contact_info--email {
+        font-size: 0.8125rem;
+        line-height: 1.3rem;
+        margin-top: 1rem;
+    }
 }
