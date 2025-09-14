@@ -469,6 +469,78 @@
       "password": "71lF421g$*Wa",
       "role": "user",
       "id": 4
+    },
+    {
+      "last_name": "Алексеева",
+      "first_name": "Злата",
+      "middle_name": "Романовна",
+      "phone": "+375 (29) 317-84-95",
+      "email": "z.alexeeva92@mail.ru",
+      "birthdate": "1998-08-14",
+      "nickname": "ЗлаАле791",
+      "password": "LAklNtyLJfEi",
+      "role": "user",
+      "id": 5
+    },
+    {
+      "last_name": "Ковальчук",
+      "first_name": "Артём",
+      "middle_name": "",
+      "phone": "+375 (33) 608-12-47",
+      "email": "artem.kovalchuk.v@inbox.ru",
+      "birthdate": "1987-01-03",
+      "nickname": "АртКов439",
+      "password": "%y3#PWIRYxjV",
+      "role": "user",
+      "id": 6
+    },
+    {
+      "last_name": "Яскевич",
+      "first_name": "Антонина",
+      "middle_name": "Петровна",
+      "phone": "+375 (25) 944-71-30",
+      "email": "antonina.yaskievich@gmail.com",
+      "birthdate": "1978-11-28",
+      "nickname": "АнтЯск760",
+      "password": "&zupdNdpziQF",
+      "role": "user",
+      "id": 7
+    },
+    {
+      "last_name": "Шнитко",
+      "first_name": "Денис",
+      "middle_name": "Олегович",
+      "phone": "+375 (44) 752-36-18",
+      "email": "d.shnitko.work@yandex.by",
+      "birthdate": "2001-07-05",
+      "nickname": "ДенШни603",
+      "password": "ShuGR))h6pE*",
+      "role": "user",
+      "id": 8
+    },
+    {
+      "last_name": "Цыганок",
+      "first_name": "Лидия",
+      "middle_name": "",
+      "phone": "+375 (29) 855-24-09",
+      "email": "l.tsyganok_84@tut.by",
+      "birthdate": "1995-04-19",
+      "nickname": "ЛидЦыг813",
+      "password": "SEIqGxivbG4q",
+      "role": "user",
+      "id": 9
+    },
+    {
+      "last_name": "Гурский",
+      "first_name": "Максим",
+      "middle_name": "Станиславович",
+      "phone": "+375 (33) 421-67-88",
+      "email": "gursky.m.s@icloud.com",
+      "birthdate": "1995-12-12",
+      "nickname": "МакГур885",
+      "password": "9D@GIfCU7AY(",
+      "role": "user",
+      "id": 10
     }
   ]
 }
