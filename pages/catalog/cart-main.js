@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-    initProducts();
+document.addEventListener('DOMContentLoaded', async () => {
+    await initProducts();
     initFilters();
-    initCart();
+    await initCart();
     
     filterAndSortProducts();
 });

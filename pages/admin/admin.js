@@ -5,15 +5,48 @@ let currentProductId = null;
 const API_URL = 'http://localhost:3000';
 
 // Проверка аутентификации
-function checkAuth() {
+async function checkAuth() {
+    console.log('checkAuth: Проверка аутентификации...');
     const isAuthenticated = localStorage.getItem('isAdminAuthenticated') === 'true';
-    console.log('checkAuth: isAdminAuthenticated =', localStorage.getItem('isAdminAuthenticated'));
+    console.log('checkAuth: isAdminAuthenticated =', isAuthenticated);
+
     if (!isAuthenticated) {
-        console.log('checkAuth: Перенаправление на /pages/home/home.html');
+        console.log('checkAuth: Пользователь не аутентифицирован, перенаправление на /pages/home/home.html');
         window.location.href = '/pages/home/home.html';
-    } else {
-        console.log('checkAuth: Загрузка данных для админ-панели');
-        loadData();
+        return;
+    }
+
+    // Проверка роли пользователя
+    try {
+        const userId = localStorage.getItem('currentUserId');
+        if (!userId) {
+            console.log('checkAuth: ID пользователя не найден, перенаправление на /pages/catalog/catalog.html');
+            window.location.href = '/pages/catalog/catalog.html';
+            return;
+        }
+
+        console.log('checkAuth: Запрос данных пользователя с id', userId);
+        const response = await fetch(`${API_URL}/users/${userId}`);
+        if (!response.ok) throw new Error(`Ошибка загрузки данных пользователя: ${response.status}`);
+        const user = await response.json();
+
+        if (!user.role || (user.role !== 'admin' && user.role !== 'user')) {
+            console.error('checkAuth: Некорректная роль пользователя', user.role);
+            window.location.href = '/pages/catalog/catalog.html';
+            return;
+        }
+
+        if (user.role === 'user') {
+            console.log('checkAuth: Пользователь не администратор, перенаправление на /pages/catalog/catalog.html');
+            window.location.href = '/pages/catalog/catalog.html';
+        } else {
+            console.log('checkAuth: Пользователь администратор, загрузка данных для админ-панели');
+            loadData();
+        }
+    } catch (error) {
+        console.error('checkAuth: Ошибка проверки роли пользователя:', error);
+        alert('Не удалось проверить роль пользователя. Проверьте подключение к серверу.');
+        window.location.href = '/pages/home/home.html';
     }
 }
 
@@ -21,6 +54,7 @@ function checkAuth() {
 function logout() {
     console.log('logout: Очистка isAdminAuthenticated и перенаправление на /pages/home/home.html');
     localStorage.removeItem('isAdminAuthenticated');
+    localStorage.removeItem('currentUserId');
     window.location.href = '/pages/home/home.html';
 }
 
@@ -76,7 +110,7 @@ function renderUserTable(filteredUsers = users) {
             <td>${user.role === 'admin' ? 'Админ' : 'Пользователь'}</td>
             <td class="actions">
                 <button onclick="editUser(${user.id})">Редактировать</button>
-                <button class="delete-btn" onclick="deleteUser(${user.id})">Удалить</button>
+                <button class="delete-btn" onclick="confirmDeleteUser(${user.id})">Удалить</button>
             </td>
         `;
         tableBody.appendChild(row);
@@ -101,7 +135,7 @@ function renderProductTable(filteredProducts = products) {
             <td>${product.rating}</td>
             <td class="actions">
                 <button onclick="editProduct(${product.id})">Редактировать</button>
-                <button class="delete-btn" onclick="deleteProduct(${product.id})">Удалить</button>
+                <button class="delete-btn" onclick="confirmDeleteProduct(${product.id})">Удалить</button>
             </td>
         `;
         tableBody.appendChild(row);
@@ -249,6 +283,38 @@ function closeModal(modalId) {
     }
 }
 
+function openConfirmModal(type, id, title) {
+    console.log(`openConfirmModal: Открытие модального окна подтверждения для ${type} с id`, id);
+    const modal = document.getElementById('confirmModal');
+    const confirmMessage = document.getElementById('confirmMessage');
+    const confirmButton = document.getElementById('confirmButton');
+
+    if (!modal || !confirmMessage || !confirmButton) {
+        console.error('openConfirmModal: Один или несколько элементов модального окна не найдены');
+        return;
+    }
+
+    confirmMessage.textContent = `Вы уверены, что хотите удалить ${type === 'user' ? 'пользователя' : 'продукт'} "${title}"?`;
+    confirmButton.onclick = () => type === 'user' ? deleteUser(id) : deleteProduct(id);
+    modal.style.display = 'flex';
+}
+
+function confirmDeleteUser(id) {
+    const user = users.find(u => u.id === id);
+    if (user) {
+        console.log('confirmDeleteUser: Подтверждение удаления пользователя с id', id);
+        openConfirmModal('user', id, `${user.last_name} ${user.first_name}`);
+    }
+}
+
+function confirmDeleteProduct(id) {
+    const product = products.find(p => p.id === id);
+    if (product) {
+        console.log('confirmDeleteProduct: Подтверждение удаления продукта с id', id);
+        openConfirmModal('product', id, product.name);
+    }
+}
+
 async function saveUser() {
     console.log('saveUser: Сохранение пользователя, currentUserId =', currentUserId);
     const lastName = document.getElementById('userLastName').value;
@@ -383,6 +449,7 @@ async function deleteUser(id) {
         users = users.filter(u => u.id !== id);
         console.log('deleteUser: Пользователь успешно удален');
         renderUserTable();
+        closeModal('confirmModal');
     } catch (error) {
         console.error('Ошибка удаления пользователя:', error);
         alert('Не удалось удалить пользователя. Проверьте подключение к серверу.');
@@ -399,10 +466,11 @@ async function deleteProduct(id) {
         products = products.filter(p => p.id !== id);
         console.log('deleteProduct: Продукт успешно удален');
         renderProductTable();
+        closeModal('confirmModal');
     } catch (error) {
         console.error('Ошибка удаления продукта:', error);
         alert('Не удалось удалить продукт. Проверьте подключение к серверу.');
     }
 }
 
-checkAuth();
+document.addEventListener('DOMContentLoaded', checkAuth);

@@ -91,29 +91,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            const user = users.find(u => {
-                const emailMatch = u.email === email;
-                const passwordMatch = u.password === password;
-                const roleMatch = u.role === 'admin';
-                console.log('Проверка пользователя:', {
-                    email: u.email,
-                    emailMatch,
-                    passwordMatch,
-                    roleMatch,
-                    userData: u
-                });
-                return emailMatch && passwordMatch && roleMatch;
-            });
+            const user = users.find(u => u.email === email && u.password === password);
 
             if (user) {
-                console.log('Успешный вход: Установка isAdminAuthenticated и перенаправление на index.html');
+                console.log('Успешный вход: Установка данных в localStorage и перенаправление');
                 localStorage.setItem('isAdminAuthenticated', 'true');
-                console.log('isAdminAuthenticated установлено:', localStorage.getItem('isAdminAuthenticated'));
-                console.log('Перенаправление на', '/pages/admin/admin.html');
-                window.location.href = '/pages/admin/admin.html';
+                localStorage.setItem('currentUserId', user.id);
+
+                if (user.role === 'user') {
+                    console.log('Перенаправление пользователя на /pages/catalog/catalog.html');
+                    window.location.href = '/pages/catalog/catalog.html';
+                } else if (user.role === 'admin') {
+                    console.log('Перенаправление администратора на /pages/admin/admin.html');
+                    window.location.href = '/pages/admin/admin.html';
+                }
             } else {
                 console.log('Ошибка входа: Пользователь не найден или неверные учетные данные');
-                alert('Неверный email, пароль или недостаточно прав (требуется роль admin).');
+                alert('Неверный email или пароль.');
             }
         } catch (error) {
             console.error('Ошибка загрузки данных:', error);

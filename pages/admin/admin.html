@@ -120,6 +120,16 @@
             </div>
         </div>
     </div>
+    <div class="modal" id="confirmModal">
+        <div class="modal-content">
+            <h3>Подтверждение удаления</h3>
+            <p id="confirmMessage"></p>
+            <div class="btn-group">
+                <button class="cancel-btn" onclick="closeModal('confirmModal')">Отмена</button>
+                <button id="confirmButton" class="delete-btn">Удалить</button>
+            </div>
+        </div>
+    </div>
     <script src="/pages/admin/admin.js"></script>
 </body>
 </html>

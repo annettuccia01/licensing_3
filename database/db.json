@@ -515,7 +515,7 @@
       "birthdate": "2001-07-05",
       "nickname": "ДенШни603",
       "password": "ShuGR))h6pE*",
-      "role": "user",
+      "role": "admin",
       "id": 8
     },
     {
@@ -541,6 +541,50 @@
       "password": "9D@GIfCU7AY(",
       "role": "user",
       "id": 10
+    }
+  ],
+  "carts": [
+    {
+      "userId": 10,
+      "items": [
+        {
+          "productId": 2,
+          "name": "Ultra Omega-3",
+          "quantity": 2
+        },
+        {
+          "productId": 6,
+          "name": "Sleep tight",
+          "quantity": 2
+        },
+        {
+          "productId": 18,
+          "name": "Metabolism & AMPK Activator",
+          "quantity": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "userId": 5,
+      "items": [
+        {
+          "productId": 10,
+          "name": "Calsium, magnesium, zinc",
+          "quantity": 1
+        },
+        {
+          "productId": 7,
+          "name": "Whey Protein Isolate",
+          "quantity": 1
+        },
+        {
+          "productId": 15,
+          "name": "Folic acid",
+          "quantity": 1
+        }
+      ],
+      "id": 2
     }
   ]
 }

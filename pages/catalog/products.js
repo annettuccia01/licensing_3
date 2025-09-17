@@ -3,6 +3,7 @@ const categoryOptionsContainer = document.getElementById('category-options');
 
 const itemsPerPage = 10;
 let currentPage = 1;
+// Объявляем products только здесь
 let products = [];
 
 async function initProducts() {
@@ -10,11 +11,25 @@ async function initProducts() {
         const response = await fetch('http://localhost:3000/products');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         products = await response.json();
+        console.log('Products loaded:', products); // Лог для отладки
+        window.products = products; // Делаем глобальной для cart.js
+        
         renderCategoryFilters();
         filterAndSortProducts();
+        
+        // Инициализируем корзину после загрузки продуктов
+        if (typeof window.initCart === 'function') {
+            await window.initCart(products);
+        } else {
+            console.error('initCart not available. Make sure cart.js is loaded.');
+        }
     } catch (error) {
         console.error('Error loading products:', error);
         productsContainer.innerHTML = '<div class="no-results">Error loading products. Please try again later.</div>';
+        window.products = []; // Устанавливаем пустой массив в случае ошибки
+        if (typeof window.initCart === 'function') {
+            await window.initCart([]);
+        }
     }
 }
 
@@ -86,10 +101,50 @@ function renderProducts(productsToRender, page = 1) {
         button.addEventListener('click', (e) => {
             e.stopPropagation();
             const productId = parseInt(button.getAttribute('data-id'));
-            addToCart(productId);
-            toggleCart(true);
+            if (typeof window.addToCart === 'function') {
+                window.addToCart(productId);
+                if (typeof window.toggleCart === 'function') {
+                    window.toggleCart(true);
+                }
+            } else {
+                console.error('addToCart not available. Make sure cart.js is loaded.');
+                alert('Корзина не инициализирована. Перезагрузите страницу.');
+            }
         });
     });
 
     renderPagination(productsToRender.length, page);
 }
+
+function filterAndSortProducts() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const selectedCategories = Array.from(checkboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
+    
+    let filteredProducts = products;
+    if (selectedCategories.length > 0 && selectedCategories.length < [...new Set(products.map(p => p.category))].length) {
+        filteredProducts = products.filter(p => selectedCategories.includes(p.category));
+    }
+    
+    renderProducts(filteredProducts, 1);
+}
+
+function renderPagination(totalItems, currentPageNum) {
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    // Логика рендеринга пагинации (пример)
+    let paginationHtml = '<div class="pagination">';
+    if (currentPageNum > 1) {
+        paginationHtml += `<button onclick="renderProducts(filteredProducts, ${currentPageNum - 1})">Previous</button>`;
+    }
+    for (let i = 1; i <= totalPages; i++) {
+        paginationHtml += `<button onclick="renderProducts(filteredProducts, ${i})" ${i === currentPageNum ? 'class="active"' : ''}>${i}</button>`;
+    }
+    if (currentPageNum < totalPages) {
+        paginationHtml += `<button onclick="renderProducts(filteredProducts, ${currentPageNum + 1})">Next</button>`;
+    }
+    paginationHtml += '</div>';
+    productsContainer.insertAdjacentHTML('afterend', paginationHtml);
+}
+
+document.addEventListener('DOMContentLoaded', initProducts);
