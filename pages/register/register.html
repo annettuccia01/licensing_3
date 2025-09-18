@@ -6,6 +6,7 @@
     <title data-i18n="register.title">Create Your Account</title>
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/pages/modal/modal.css">
     <link rel="stylesheet" href="/pages/register/register.css">
 </head>
 <body>
@@ -16,6 +17,23 @@
                 <div class="progress"></div>
             </div>
             <div class="percent">0%</div>
+        </div>
+    </div>
+    <div id="account-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <button id="close-modal" class="modal-close">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M256-200l-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224z"/>
+                </svg>
+            </button>
+            <h2 class="modal-title" data-i18n="modal.title">Account</h2>
+            <form id="loginForm" class="modal-form">
+                <label for="email" data-i18n="modal.email_label">Email</label>
+                <input type="email" id="email" name="email" required data-i18n="modal.place_holder_email" autocomplete="email" placeholder="Enter your email">
+                <label for="password" data-i18n="modal.password_label">Password</label>
+                <input type="password" id="password" name="password" required data-i18n="modal.place_holder_password" autocomplete="current-password" placeholder="Enter your password">
+                <button id="loginBtn" type="submit" class="modal-submit" data-i18n="modal.submit">Sign In</button>
+            </form>
         </div>
     </div>
     <header class="header">
@@ -146,7 +164,7 @@
                     <button type="submit" class="register-submit" data-i18n="register.submit" disabled>Sign Up</button>
                     <p class="register-login">
                         <span data-i18n="register.login_text">Already have an account? </span>
-                        <a href="/pages/catalog/catalog.html#account-btn" class="register-login-link" data-i18n="register.login_link">Sign In</a>
+                        <a href="#" class="register-login-link" data-i18n="register.login_link">Sign In</a>
                     </p>
                 </form>
             </div>
@@ -201,11 +219,13 @@
     </footer>
 
     <script src="/js/preloader.js"></script>
+    <script src="/js/access-control.js"></script>
     <script src="/js/theme.js" defer></script>
     <script src="/js/i18n.js" type="module"></script>
     <script src="/js/reset.js"  type="module"></script>
     <script src="/js/burger.js"></script>
     
-    <script src="/pages/register/register.js" type="module"></script>
+    <script src="/pages/register/register.js" type="module"></script>   
+    <script src="/pages/modal/modal.js"></script>
 </body>
 </html>

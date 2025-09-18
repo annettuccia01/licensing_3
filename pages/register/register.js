@@ -40,17 +40,14 @@ class RegistrationForm {
     }
 
     setupEventListeners() {
-        // Обработчик для переключения типа пароля
         document.querySelectorAll('input[name="password-type"]').forEach(radio => {
             radio.addEventListener('change', (e) => this.togglePasswordFields(e.target.value));
         });
 
-        // Обработчик генерации никнейма
         document.getElementById('generate-nickname').addEventListener('click', () => {
             this.generateNickname();
         });
 
-        // Разблокировка поля никнейма при клике, если попытки закончились
         document.getElementById('nickname').addEventListener('click', () => {
             if (this.nicknameAttempts <= 0) {
                 document.getElementById('nickname').readOnly = false;
@@ -58,7 +55,6 @@ class RegistrationForm {
             }
         });
 
-        // Валидация полей при вводе (кроме телефона)
         this.form.addEventListener('input', (e) => {
             if (e.target.id !== 'phone') {
                 this.validateField(e.target);
@@ -66,13 +62,11 @@ class RegistrationForm {
             }
         });
 
-        // Валидация телефона при потере фокуса
         document.getElementById('phone').addEventListener('blur', (e) => {
             this.validateField(e.target);
             this.updateSubmitButton();
         });
 
-        // Обработчик отправки формы
         this.form.addEventListener('submit', (e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -80,7 +74,6 @@ class RegistrationForm {
             this.handleSubmit();
         });
 
-        // Обработчик для ссылок политики и футера
         const policyLinks = document.querySelectorAll('a[href*="/pages/policies/"], .footer_left--links a');
         policyLinks.forEach(link => {
             link.addEventListener('click', async (e) => {
@@ -106,61 +99,113 @@ class RegistrationForm {
             });
         });
 
-        // Обработчики модального окна
-        const modal = document.getElementById('success-modal');
-        const closeModal = () => {
-            console.log('Closing modal at', new Date().toISOString());
-            modal.classList.remove('active');
-            modal.style.display = 'none';
+        const successModal = document.getElementById('success-modal');
+        const closeSuccessModal = () => {
+            console.log('Closing success modal at', new Date().toISOString());
+            successModal.classList.remove('active');
+            successModal.style.display = 'none';
             this.resetForm();
             window.location.href = '/pages/catalog/catalog.html';
         };
 
-        document.querySelector('.modal-ok').addEventListener('click', closeModal);
-        document.querySelector('.modal-close').addEventListener('click', closeModal);
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
+        if (successModal) {
+            document.querySelector('.modal-ok')?.addEventListener('click', closeSuccessModal);
+            document.querySelector('.modal-close')?.addEventListener('click', closeSuccessModal);
+            successModal.addEventListener('click', (e) => {
+                if (e.target === successModal) closeSuccessModal();
+            });
+        }
 
-        // Закрытие модального окна по Escape
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-                closeModal();
+            if (e.key === 'Escape' && successModal?.classList.contains('active')) {
+                closeSuccessModal();
             }
         });
 
-        // Запрет вставки в поле подтверждения пароля
-        document.getElementById('confirm-password').addEventListener('paste', (e) => {
+        const registerLoginLink = document.querySelector('#register-login-link, .register-login-link');
+        if (registerLoginLink) {
+            registerLoginLink.addEventListener('click', async (e) => {
+                e.preventDefault();
+                console.log('Register-login-link clicked, attempting to open account modal at', new Date().toISOString());
+                try {
+                    await i18n.loadTranslations('modal');
+                    this.openAccountModal();
+                } catch (error) {
+                    console.error('Error loading modal translations:', error);
+                }
+            });
+        } else {
+            console.warn('Element register-login-link not found');
+        }
+
+        const accountModal = document.getElementById('account-modal');
+        if (accountModal) {
+            const closeAccountModal = () => {
+                console.log('Closing account modal at', new Date().toISOString());
+                accountModal.classList.remove('active');
+                accountModal.style.display = 'none';
+            };
+
+            const closeModalBtn = document.getElementById('close-modal');
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', closeAccountModal);
+            } else {
+                console.warn('Close modal button (#close-modal) not found');
+            }
+
+            accountModal.addEventListener('click', (e) => {
+                if (e.target === accountModal) closeAccountModal();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && accountModal.classList.contains('active')) {
+                    closeAccountModal();
+                }
+            });
+        } else {
+            console.warn('Account modal (account-modal) not found.');
+        }
+
+        document.getElementById('confirm-password')?.addEventListener('paste', (e) => {
             e.preventDefault();
         });
 
-        // Обработчик смены языка для обновления сообщений об ошибках
         i18n.onLanguageChange(() => {
             console.log('Language changed to:', i18n.currentLang, 'at', new Date().toISOString());
             this.revalidateAllFields();
             this.updateNicknameAttemptsDisplay();
         });
 
-        // Отладка изменений модального окна
-        if (modal) {
+        if (successModal) {
             const observer = new MutationObserver((mutations) => {
                 mutations.forEach((mutation) => {
                     if (mutation.attributeName === 'style' || mutation.attributeName === 'class') {
-                        console.log('Modal style/class changed:', {
-                            display: modal.style.display,
-                            hasActive: modal.classList.contains('active'),
+                        console.log('Success modal style/class changed:', {
+                            display: successModal.style.display,
+                            hasActive: successModal.classList.contains('active'),
                             timestamp: new Date().toISOString()
                         });
                     }
                 });
             });
-            observer.observe(modal, { attributes: true });
+            observer.observe(successModal, { attributes: true });
         }
 
-        // Отладка перезагрузки страницы
         window.addEventListener('beforeunload', () => {
             console.log('Page is about to unload at', new Date().toISOString());
         });
+    }
+
+    openAccountModal() {
+        const accountModal = document.getElementById('account-modal');
+        if (!accountModal) {
+            console.error('Account modal not found');
+            return;
+        }
+        accountModal.classList.add('active');
+        accountModal.style.display = 'flex'; // Восстанавливаем явное задание display: flex
+        accountModal.focus();
+        console.log('Account modal opened, display:', accountModal.style.display, 'active:', accountModal.classList.contains('active'));
     }
 
     revalidateAllFields() {
@@ -567,14 +612,11 @@ class RegistrationForm {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // Ожидаем загрузки переводов
     await i18n.loadTranslations('register');
     
-    // Инициализация формы
     const registrationForm = new RegistrationForm();
     await registrationForm.init();
 
-    // Форматирование номера телефона
     const phoneInput = document.getElementById('phone');
     phoneInput.addEventListener('input', function(e) {
         let value = e.target.value.replace(/\D/g, '');

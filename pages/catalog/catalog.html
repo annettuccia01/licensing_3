@@ -6,7 +6,6 @@
     <title>Good4Me</title>
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/pages/modal/modal.css">
     <link rel="stylesheet" href="/pages/catalog/catalog.css">
     <link rel="stylesheet" href="/pages/catalog/cart.css">
 </head>
@@ -18,27 +17,6 @@
                 <div class="progress"></div>
             </div>
             <div class="percent">0%</div>
-        </div>
-    </div>
-    <div id="account-modal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <button id="close-modal" class="modal-close">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
-                    <path d="M256-200l-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224z"/>
-                </svg>
-            </button>
-            <h2 class="modal-title" data-i18n="modal.title">Account</h2>
-            <form id="loginForm" class="modal-form">
-                <label for="email" data-i18n="modal.email_label">Email</label>
-                <input type="email" id="email" name="email" required data-i18n="modal.place_holder_email" autocomplete="email" placeholder="Enter your email">
-                <label for="password" data-i18n="modal.password_label">Password</label>
-                <input type="password" id="password" name="password" required data-i18n="modal.place_holder_password" autocomplete="current-password" placeholder="Enter your password">
-                <button id="loginBtn" type="submit" class="modal-submit" data-i18n="modal.submit">Sign In</button>
-                <p class="modal-register">
-                    <span data-i18n="modal.register_text">Don't have an account?</span>
-                    <a href="/pages/register/register.html" class="modal-register-link" data-i18n="modal.register_link">Sign Up</a>
-                </p>
-            </form>
         </div>
     </div>
     <header class="header">
@@ -199,6 +177,7 @@
     </footer>
 
     <script src="/js/preloader.js"></script>
+    <script src="/js/access-control.js"></script>
     <script src="/js/i18n.js" type="module"></script>
     <script src="/js/theme.js" defer></script>
     <script src="/js/reset.js" defer></script>
@@ -208,7 +187,5 @@
     <script src="/pages/catalog/products.js"></script>
     <script src="/pages/catalog/filters.js" defer></script>
     <script src="/pages/catalog/pagination.js" defer></script>
-
-    <script src="/pages/modal/modal.js"></script>
 </body>
 </html>
