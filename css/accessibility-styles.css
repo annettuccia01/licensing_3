@@ -1,0 +1,74 @@
+body.accessibility-mode {
+    font-family: var(--font-family, Arial, sans-serif);
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.accessibility-mode main {
+    margin-top: 6.25rem;
+}
+
+body.accessibility-mode.font-normal {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.0192em;
+    word-spacing: 0.0256em;
+}
+
+body.accessibility-mode.font-large {
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.024em;
+    word-spacing: 0.032em;
+}
+
+body.accessibility-mode.font-extra-large {
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 0.0288em;
+    word-spacing: 0.0384em;
+}
+
+body.accessibility-mode.white-black {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.accessibility-mode.beige-brown {
+    background-color: #f5f5dc;
+    color: #4b2e2e;
+}
+
+body.accessibility-mode.blue-darkblue {
+    background-color: #e6f3ff;
+    color: #000066;
+}
+
+
+@media (max-width: 768px) {
+    body.accessibility-mode.font-normal {
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 0.0168em;
+        word-spacing: 0.0224em;
+    }
+
+    body.accessibility-mode.font-large {
+        font-size: 18px;
+        line-height: 1.5;
+        letter-spacing: 0.0216em;
+        word-spacing: 0.0288em;
+    }
+
+    body.accessibility-mode.font-extra-large {
+        font-size: 22px;
+        line-height: 1.5;
+        letter-spacing: 0.0264em;
+        word-spacing: 0.0352em;
+    }
+}

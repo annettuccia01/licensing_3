@@ -1,0 +1,309 @@
+body.accessibility-mode.no-images img,
+body.accessibility-mode.no-images .home_img,
+body.accessibility-mode.no-images .control_img,
+body.accessibility-mode.no-images .inside_img,
+body.accessibility-mode.no-images .running_track img {
+    display: none;
+    position: relative;
+}
+
+body.accessibility-mode.no-images img::after,
+body.accessibility-mode.no-images .home_img::after,
+body.accessibility-mode.no-images .control_img::after,
+body.accessibility-mode.no-images .inside_img::after,
+body.accessibility-mode.no-images .running_track img::after {
+    content: "Изображение отключено";
+    display: block;
+    color: currentColor;
+    font-size: inherit;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: normal;
+}
+
+body.accessibility-mode .slide_pic {
+    display: none;
+    position: relative;
+}
+
+body.accessibility-mode .slide_pic::after {
+    content: "Изображение отключено";
+    display: block;
+    color: currentColor;
+    font-size: inherit;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: normal;
+}
+
+body.accessibility-mode .slider_buttons {
+    display: none;
+}
+
+body.accessibility-mode p,
+body.accessibility-mode .home_text--supertitle,
+body.accessibility-mode .home_text--title,
+body.accessibility-mode .home_text--subtitle,
+body.accessibility-mode .servises_shipping--text,
+body.accessibility-mode .servises_guarantee--text,
+body.accessibility-mode .servises_payments--text,
+body.accessibility-mode .control_text--title,
+body.accessibility-mode .control_text--subtitle,
+body.accessibility-mode .inside_text--title,
+body.accessibility-mode .inside_text--subtitle,
+body.accessibility-mode .health_point,
+body.accessibility-mode .health_point p,
+body.accessibility-mode .reviews_text--supertitle,
+body.accessibility-mode .reviews_text--title,
+body.accessibility-mode .slide_text--review,
+body.accessibility-mode .slide_text--client,
+body.accessibility-mode .running_text--title,
+body.accessibility-mode .running_text--subtitle {
+    max-width: 80ch;
+    text-align: center;
+    margin: 0 auto 2em;
+}
+
+body.accessibility-mode embed,
+body.accessibility-mode object,
+body.accessibility-mode [type="application/x-shockwave-flash"],
+body.accessibility-mode .slide,
+body.accessibility-mode .slider_button--left,
+body.accessibility-mode .slider_button--right,
+body.accessibility-mode .shop-btn,
+body.accessibility-mode .control_btn {
+    transition: none !important;
+    animation: none !important;
+}
+
+body.accessibility-mode .home,
+body.accessibility-mode .control,
+body.accessibility-mode .inside,
+body.accessibility-mode .reviews,
+body.accessibility-mode .servises {
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 80ch;
+}
+
+body.accessibility-mode .home {
+    min-height: auto;
+    padding: 1rem;
+}
+
+body.accessibility-mode .home_text {
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 0;
+    order: 1;
+}
+
+body.accessibility-mode .home_img {
+    order: 2;
+    max-width: 100%;
+    margin: 1rem auto;
+}
+
+body.accessibility-mode .servises {
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem;
+}
+
+body.accessibility-mode .servises_shipping,
+body.accessibility-mode .servises_guarantee,
+body.accessibility-mode .servises_payments {
+    align-items: center;
+    max-width: 80ch;
+}
+
+body.accessibility-mode .control_rectangle {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    padding: 1rem;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.accessibility-mode .control_text {
+    width: 100%;
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 0;
+    order: 1;
+}
+
+body.accessibility-mode .control_img {
+    order: 2; 
+    max-width: 100%;
+    margin: 1rem auto;
+}
+
+body.accessibility-mode .inside {
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.accessibility-mode .inside_text {
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 0;
+    order: 1;
+}
+
+body.accessibility-mode .inside_img {
+    order: 2; 
+    max-width: 100%;
+    margin: 1rem auto;
+}
+
+body.accessibility-mode .inside_overlap,
+body.accessibility-mode .inside_ellipse--one,
+body.accessibility-mode .inside_ellipse--two,
+body.accessibility-mode .inside_ellipse--three,
+body.accessibility-mode .control_flower {
+    display: none;
+}
+
+body.accessibility-mode .health_points {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 80ch;
+    margin: 1rem 0;
+}
+
+body.accessibility-mode .health_point {
+    position: static;
+    width: 100%;
+    max-width: 80ch;
+}
+
+body.accessibility-mode .reviews {
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.accessibility-mode .reviews_text {
+    top: 0;
+    left: 0;
+    max-width: 80ch;
+    margin: 0 auto 1rem;
+    order: 1;
+}
+
+body.accessibility-mode .reviews_slider {
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 80ch;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.accessibility-mode .slide {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+body.accessibility-mode .slide_text {
+    top: 0;
+    max-width: 80ch;
+    margin: 0 auto;
+    order: 1;
+}
+
+body.accessibility-mode .running {
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.accessibility-mode .running_text {
+    margin: 0 auto;
+    max-width: 80ch;
+    order: 1;
+}
+
+body.accessibility-mode .running_track {
+    display: none;
+}
+
+body.accessibility-mode .shop-btn,
+body.accessibility-mode .control_btn {
+    background-color: transparent;
+    border: 2px solid currentColor;
+    color: currentColor;
+    text-transform: none;
+    font-weight: normal;
+    padding: 0.5rem 1rem;
+    width: auto;
+    height: auto;
+    min-width: 120px;
+    margin: 0 auto;
+}
+
+body.accessibility-mode .home,
+body.accessibility-mode .control_rectangle,
+body.accessibility-mode .inside,
+body.accessibility-mode .reviews,
+body.accessibility-mode .running,
+body.accessibility-mode .servises_shipping--ellipse,
+body.accessibility-mode .servises_guarantee--ellipse,
+body.accessibility-mode .servises_payments--ellipse {
+    background-color: transparent !important;
+}
+
+body.accessibility-mode .home_text--supertitle,
+body.accessibility-mode .reviews_text--title,
+body.accessibility-mode .health_point,
+body.accessibility-mode .slide_text--client {
+    color: currentColor !important;
+}
+
+body.accessibility-mode * {
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+}
+
+@media (max-width: 768px) {
+    body.accessibility-mode .home,
+    body.accessibility-mode .control,
+    body.accessibility-mode .inside,
+    body.accessibility-mode .reviews,
+    body.accessibility-mode .servises {
+        padding: 0.5rem;
+    }
+}
