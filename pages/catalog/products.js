@@ -3,7 +3,6 @@ const categoryOptionsContainer = document.getElementById('category-options');
 
 const itemsPerPage = 10;
 let currentPage = 1;
-// Объявляем products только здесь
 let products = [];
 
 async function initProducts() {
@@ -11,24 +10,27 @@ async function initProducts() {
         const response = await fetch('http://localhost:3000/products');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         products = await response.json();
-        console.log('Products loaded:', products); // Лог для отладки
-        window.products = products; // Делаем глобальной для cart.js
+        console.log('Products loaded:', products);
+        window.products = products;
         
         renderCategoryFilters();
         filterAndSortProducts();
         
-        // Инициализируем корзину после загрузки продуктов
         if (typeof window.initCart === 'function') {
             await window.initCart(products);
+            console.log('Cart initialized with products');
         } else {
-            console.error('initCart not available. Make sure cart.js is loaded.');
+            console.warn('initCart function not available. Ensure cart.js is loaded before products.js.');
         }
     } catch (error) {
         console.error('Error loading products:', error);
         productsContainer.innerHTML = '<div class="no-results">Error loading products. Please try again later.</div>';
-        window.products = []; // Устанавливаем пустой массив в случае ошибки
+        window.products = [];
         if (typeof window.initCart === 'function') {
             await window.initCart([]);
+            console.log('Cart initialized with empty products due to error');
+        } else {
+            console.warn('initCart function not available on error. Ensure cart.js is loaded.');
         }
     }
 }
@@ -107,7 +109,7 @@ function renderProducts(productsToRender, page = 1) {
                     window.toggleCart(true);
                 }
             } else {
-                console.error('addToCart not available. Make sure cart.js is loaded.');
+                console.error('addToCart not available. Ensure cart.js is loaded.');
                 alert('Корзина не инициализирована. Перезагрузите страницу.');
             }
         });
@@ -132,7 +134,6 @@ function filterAndSortProducts() {
 
 function renderPagination(totalItems, currentPageNum) {
     const totalPages = Math.ceil(totalItems / itemsPerPage);
-    // Логика рендеринга пагинации (пример)
     let paginationHtml = '<div class="pagination">';
     if (currentPageNum > 1) {
         paginationHtml += `<button onclick="renderProducts(filteredProducts, ${currentPageNum - 1})">Previous</button>`;

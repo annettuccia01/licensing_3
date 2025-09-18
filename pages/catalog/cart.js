@@ -60,7 +60,6 @@ async function saveCart() {
         });
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         
-        // Обновляем локальный cart данными с сервера (получаем ID после POST)
         const savedCart = await response.json();
         cart = savedCart;
         
@@ -98,7 +97,6 @@ async function initCart(productsData) {
     await loadCart();
 }
 
-// Экспортируем функции глобально
 window.initCart = initCart;
 window.addToCart = addToCart;
 window.toggleCart = toggleCart;
@@ -257,7 +255,7 @@ function toggleCart(open) {
     if (open) {
         cartSidebar.classList.add('active');
         overlay.classList.add('active');
-        renderCartItems();  // Рендерим только при открытии
+        renderCartItems();
     } else {
         cartSidebar.classList.remove('active');
         overlay.classList.remove('active');
@@ -278,12 +276,3 @@ async function checkout() {
         toggleCart(false);
     }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    if (typeof window.products !== 'undefined') {
-        initCart(window.products);
-    } else {
-        console.warn('Products not available yet, initializing with empty array');
-        initCart([]);
-    }
-});
