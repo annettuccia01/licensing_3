@@ -179,11 +179,9 @@ function domReady() {
   });
 }
 
-// Инициализация при загрузке страницы
 (async function() {
   await domReady();
   await initPage();
 })();
 
-// Экспортируем экземпляр i18n для использования в других модулях
 export default i18n;
