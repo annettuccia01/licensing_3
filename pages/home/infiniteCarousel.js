@@ -1,3 +1,9 @@
+/*
+  Copyright (c) 2026 Цед Анна Викторовна
+  Данный исходный код распространяется под лицензией MIT.
+  Полный текст лицензии находится в файле LICENSE в корне проекта.
+*/
+
 function initInfiniteCarousel() {  
     const track = document.querySelector('.running_track');  
     const images = document.querySelectorAll('.running_track img');  

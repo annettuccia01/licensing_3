@@ -1,3 +1,9 @@
+/*
+  Copyright (c) 2026 Цед Анна Викторовна
+  Данный исходный код распространяется под лицензией MIT.
+  Полный текст лицензии находится в файле LICENSE в корне проекта.
+*/
+
 const themeToggleBtn = document.getElementById('theme-switch');
 const body = document.body;
 const lightIcon = document.querySelector('.light-icon');

@@ -1,3 +1,9 @@
+/*
+  Copyright (c) 2026 Цед Анна Викторовна
+  Данный исходный код распространяется под лицензией MIT.
+  Полный текст лицензии находится в файле LICENSE в корне проекта.
+*/
+
 body.accessibility-mode {
     font-family: var(--font-family, Arial, sans-serif);
     max-width: 100%;
